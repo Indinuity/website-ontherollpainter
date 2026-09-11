@@ -1,0 +1,32 @@
+# OS and editor droppings
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+
+# images/ is a whitelist. Only the web-ready files index.html actually references
+# can be committed. Raw camera exports (IMG_1234.jpg, "Barbs kitchen.jpg") are
+# several MB each and carry GPS coordinates of the customer's house in their
+# metadata, so they must never be pushed. Run tools/prep-photo.py to make a
+# web-ready copy under one of the allowed names — see README section 2.
+images/*
+!images/.gitkeep
+!images/logo.svg
+!images/logo.png
+!images/hero.jpg
+!images/portrait.jpg
+!images/work-*.jpg
+!images/before.jpg
+!images/after.jpg
+!images/og-image.jpg
+!images/favicon.png
+
+# Design originals
+*.psd
+*.ai
+*.heic
+*.HEIC
+*.zip

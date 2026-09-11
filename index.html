@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============================================================
+     FILL THESE IN — search for FILL: to find every spot
+     ============================================================ -->
+<title>On The Roll Painters — Barrie, Innisfil, Orillia &amp; Springwater</title>
+<meta name="description" content="Affordable professional quality painting. Serving Barrie, Innisfil, Orillia and Springwater. One painter, careful prep, and a written quote before work starts.">
+<link rel="canonical" href="https://ontherollpainter.ca/">
+<meta name="theme-color" content="#4C5847">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="On The Roll Painters">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://ontherollpainter.ca/">
+<meta property="og:title" content="On The Roll Painters — Affordable Professional Quality Painting">
+<meta property="og:description" content="Painting, cabinet refinishing and deck staining in Barrie, Innisfil, Orillia and Springwater. Careful prep, tidy sites, and a written quote before any work starts.">
+<meta property="og:image" content="https://ontherollpainter.ca/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A kitchen with freshly painted white cabinets, by On The Roll Painters">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="On The Roll Painters — Affordable Professional Quality Painting">
+<meta name="twitter:description" content="Painting, cabinet refinishing and deck staining in Barrie, Innisfil, Orillia and Springwater. Careful prep, tidy sites, and a written quote before any work starts.">
+<meta name="twitter:image" content="https://ontherollpainter.ca/images/og-image.jpg">
+
+<link rel="icon" href="images/favicon.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- FILL: structured data for local search. Keep it in step with the visible page:
+     same email, same towns, same services. No phone or address here, by request — do not
+     add them without asking. Add a "logo" URL once that file exists. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HousePainter",
+  "@id": "https://ontherollpainter.ca/#business",
+  "name": "On The Roll Painters",
+  "url": "https://ontherollpainter.ca/",
+  "email": "ontherollpainter@gmail.com",
+  "slogan": "Affordable Professional Quality Painting",
+  "description": "Affordable professional quality painting: rooms, kitchen cabinets, stairs and railings, closets, furniture, drywall repair, backsplashes and deck staining. Serving Barrie, Innisfil, Orillia and Springwater. One painter, start to finish. Written quotes before any work starts.",
+  "image": "https://ontherollpainter.ca/images/hero.jpg",
+  "founder": {"@type": "Person", "name": "Lexis Carter"},
+  "areaServed": ["Barrie", "Innisfil", "Orillia", "Springwater"],
+  "priceRange": "$",
+  "knowsAbout": ["Interior painting", "Kitchen cabinet painting", "Deck staining", "Stair and railing painting", "Closet painting", "Furniture refinishing", "Drywall repair", "Backsplash installation"]
+}
+</script>
+
+<style>
+/* ============================================================
+   PALETTE
+   Neutral throughout so the photographs carry all the colour.
+   The brand olive appears in exactly two places: header and footer.
+   Swap --brand and --brand-deep to match your logo.
+   ============================================================ */
+:root{
+  --ink:#241F1A;        /* umber, not black */
+  --body:#443D35;
+  --grey:#6B6156;       /* warm grey; dark enough to pass AA on both paper and stone */
+  --paper:#FCFBF8;      /* warm off-white */
+  --stone:#EDE8DF;      /* limestone */
+  --hair:#DCD5C9;
+  --brand:#4C5847;      /* olive, header and footer only */
+  --brand-deep:#2F3730;
+
+  --display:"Bodoni Moda",Georgia,serif;
+  --ui:"Jost",system-ui,sans-serif;
+
+  --pad:clamp(1.25rem,6vw,6rem);
+  --maxw:80rem;
+  --narrow:46rem;
+  --bar-h:4.75rem;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--bar-h)}
+body{
+  margin:0;background:var(--paper);color:var(--body);
+  font-family:var(--ui);font-weight:300;font-size:1.0625rem;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--ink);margin:0;line-height:1.04;letter-spacing:-0.005em}
+h1{font-size:clamp(2.75rem,7.5vw,6rem)}
+h2{font-size:clamp(2rem,4.6vw,3.5rem)}
+h3{font-size:1.5rem}
+p{margin:0 0 1.15rem;max-width:60ch}
+
+/* small tracked caps: the caption voice of the genre, used sparingly */
+.caps{
+  font-family:var(--ui);font-weight:400;font-size:.7rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--grey);
+}
+
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+.narrow{max-width:var(--narrow)}
+.narrow h2,.qhead h2{margin:.75rem 0 1.25rem}
+section{padding-block:clamp(4.5rem,10vw,9rem)}
+.stone{background:var(--stone)}
+.centered{text-align:center}
+.centered p{margin-inline:auto}
+.rule{height:1px;background:var(--hair);border:0;margin:0}
+.cta-row{margin-top:2.5rem}
+
+:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+
+/* keyboard users can jump past the header; invisible until focused */
+.skip{
+  position:absolute;left:-999px;top:0;z-index:100;
+  background:var(--ink);color:#fff;padding:.75rem 1.25rem;text-decoration:none;
+  font-family:var(--ui);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+}
+.skip:focus{left:var(--pad);top:var(--pad)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- header ---------- */
+.bar{position:sticky;top:0;z-index:60;background:var(--brand);color:#fff}
+.bar .wrap{display:flex;align-items:center;gap:1.75rem;min-height:var(--bar-h)}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;margin-right:auto;min-width:0}
+.brand img{height:2.3rem;width:auto}
+.brand .name{font-family:var(--display);font-weight:400;font-size:1.2rem;letter-spacing:.01em;line-height:1.15;color:#fff}
+.brand .name span{display:block;font-family:var(--ui);font-weight:300;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.78);margin-top:.15rem}
+nav{display:flex;gap:2rem;align-items:center}
+nav a{font-family:var(--ui);font-weight:400;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.85)}
+nav a:hover{color:#fff}
+.mini{display:none;font-family:var(--ui);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;white-space:nowrap;color:#fff}
+.navcta{display:none}
+.menu-btn{display:none;background:none;border:0;color:#fff;font-family:var(--ui);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;padding:.5rem}
+
+/* ---------- buttons ---------- */
+.btn{
+  font-family:var(--ui);font-weight:400;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  background:var(--ink);color:#fff;text-decoration:none;border:1px solid var(--ink);
+  padding:.85rem 1.6rem;border-radius:0;cursor:pointer;display:inline-block;line-height:1;
+  transition:background .2s,color .2s;
+}
+.btn:hover{background:#fff;color:var(--ink)}
+.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.btn-outline:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn-sm{padding:.6rem 1.1rem}
+
+/* ---------- photo placeholders ---------- */
+.shot{position:relative;overflow:hidden;background:var(--stone);margin:0}
+.shot img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+.shot img.missing{display:none}
+.shot.zoomable{cursor:zoom-in}
+.ph{
+  position:absolute;inset:0;z-index:0;display:grid;place-content:center;gap:.4rem;text-align:center;padding:1.5rem;
+  font-family:var(--ui);font-weight:400;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);
+  background:var(--stone);
+}
+.ph b{font-family:var(--display);font-size:1rem;letter-spacing:0;text-transform:none;font-weight:400;color:var(--body);display:block}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:80vh;min-height:min(84svh,760px);display:grid;align-items:end;color:#fff;overflow:hidden}
+.hero .shot{position:absolute;inset:0;z-index:0}
+.hero .scrim{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(36,31,26,.18) 0%,rgba(36,31,26,.28) 45%,rgba(36,31,26,.78) 100%)}
+.hero-inner{position:relative;z-index:3;padding-block:clamp(3.5rem,9vw,6rem);width:100%}
+.hero h1{color:#fff;max-width:14ch;font-size:clamp(2.3rem,6.8vw,5.25rem)}
+.hero .kicker{color:rgba(255,255,255,.82);margin-bottom:1.4rem}
+.hero .lede{font-size:1.1rem;color:rgba(255,255,255,.92);max-width:40ch;margin:1.5rem 0 2.25rem}
+
+/* ---------- spec bar ---------- */
+.specs{border-bottom:1px solid var(--hair)}
+.specs .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.specs div{padding:2rem 1.5rem;text-align:center;border-left:1px solid var(--hair)}
+.specs div:first-child{border-left:0}
+.specs b{font-family:var(--display);font-weight:400;font-size:1.75rem;color:var(--ink);display:block;margin-bottom:.35rem;line-height:1.1}
+
+/* ---------- plates (project photography) ---------- */
+.plate{margin-top:clamp(3rem,7vw,6rem)}
+.plate .shot{aspect-ratio:16/9}
+.plate.tall .shot{aspect-ratio:4/5}
+.cap{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:baseline;padding-top:1.1rem;border-top:1px solid var(--hair);margin-top:1.1rem}
+.cap h3{font-size:1.35rem;margin-bottom:.3rem}
+.cap p{font-size:.95rem;color:var(--grey);margin:0;max-width:52ch}
+.cap .meta{text-align:right;white-space:nowrap}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem)}
+.pair .shot{aspect-ratio:4/5}
+.pair-label{margin-bottom:1rem}
+.ba-pair{margin-top:clamp(2.5rem,6vw,4rem)}
+.ba-cap{margin-top:1.5rem}
+
+/* ---------- services ---------- */
+.list{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(2rem,6vw,5rem);margin-top:3rem}
+.item{padding:1.75rem 0;border-top:1px solid var(--hair)}
+.item h3{font-size:1.3rem;margin-bottom:.45rem}
+.item p{font-size:.98rem;color:var(--grey);margin:0}
+
+/* ---------- process ---------- */
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(1.5rem,3vw,2.5rem);margin-top:3.5rem}
+.step{border-top:1px solid var(--ink);padding-top:1.1rem}
+.step::before{
+  counter-increment:s;content:counter(s,decimal-leading-zero);
+  font-family:var(--display);font-size:.85rem;color:var(--grey);display:block;margin-bottom:.75rem;
+}
+.step h3{font-size:1.1rem;margin-bottom:.4rem}
+.step p{font-size:.92rem;color:var(--grey);margin:0}
+
+/* ---------- reviews ---------- */
+.pull{max-width:34ch;margin:2.5rem auto 0;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.5rem,3.2vw,2.35rem);line-height:1.3;color:var(--ink)}
+.attrib{margin-top:1.75rem}
+.small-reviews{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);margin-top:clamp(3.5rem,7vw,5.5rem);padding-top:2.5rem;border-top:1px solid var(--hair);text-align:left}
+.small-reviews p{font-family:var(--display);font-style:italic;font-size:1.1rem;line-height:1.5;color:var(--ink)}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.about-grid .shot{aspect-ratio:4/5}
+.about-grid h2{margin:.75rem 0 1.5rem}
+.signoff{font-family:var(--display);font-size:1.35rem;color:var(--ink);margin-top:2rem}
+.about-grid .cta-row{margin-top:1.5rem}
+
+/* ---------- quote ---------- */
+.quote{background:var(--ink);color:#fff}
+.quote h2{color:#fff}
+.quote .lead{color:rgba(255,255,255,.75);max-width:44ch;margin-inline:auto}
+.quote .lead a{color:#fff}
+.quote .wrap{display:grid;grid-template-columns:1fr;gap:0}
+.qhead{text-align:center;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.qhead .caps{color:rgba(255,255,255,.55)}
+form{max-width:44rem;margin-inline:auto;display:grid;gap:1.75rem;width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem}
+label{font-family:var(--ui);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);display:block;margin-bottom:.6rem}
+input[type=text],input[type=email],input[type=tel],select,textarea{
+  width:100%;font-family:var(--ui);font-weight:300;font-size:1rem;padding:.65rem 0;
+  border:0;border-bottom:1px solid rgba(255,255,255,.45);border-radius:0;
+  background:transparent;color:#fff;
+}
+select option{color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:#fff}
+textarea{min-height:5rem;resize:vertical}
+fieldset{border:0;padding:0;margin:0}
+legend{font-family:var(--ui);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.9rem;padding:0}
+.checks{display:flex;flex-wrap:wrap;gap:.6rem}
+.checks label{
+  margin:0;font-size:.72rem;letter-spacing:.12em;color:rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.45);padding:.6rem 1rem;cursor:pointer;
+  display:flex;align-items:center;gap:.5rem;
+}
+.checks input{accent-color:#fff;margin:0}
+.checks label:has(input:checked){background:#fff;color:var(--ink);border-color:#fff}
+.honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.quote .btn{background:#fff;color:var(--ink);border-color:#fff;justify-self:center;padding-inline:3rem}
+.quote .btn:hover{background:transparent;color:#fff}
+.quote .btn:disabled{opacity:.6;cursor:wait}
+.fine{font-size:.8rem;color:rgba(255,255,255,.5);text-align:center;margin:0;max-width:46ch;margin-inline:auto}
+.formnote{font-family:var(--ui);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:1rem;border:1px solid rgba(255,255,255,.4);display:none}
+.formnote.show{display:block}
+form.sent > :not(.formnote){display:none}
+
+/* ---------- footer ---------- */
+footer{background:var(--brand-deep);color:#fff;padding-block:clamp(3.5rem,6vw,5rem) 2.5rem}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem}
+footer h4{font-family:var(--ui);font-weight:400;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0 0 1.1rem}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{text-decoration:underline;text-underline-offset:3px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem;font-size:.95rem}
+.foot .mark{font-family:var(--display);font-size:1.5rem;color:#fff;margin-bottom:.75rem;line-height:1.1}
+.foot .blurb{color:rgba(255,255,255,.6);font-size:.95rem;max-width:32ch}
+.legal{border-top:1px solid rgba(255,255,255,.15);margin-top:3rem;padding-top:1.5rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+/* ---------- lightbox ---------- */
+dialog{border:0;padding:0;background:transparent;max-width:92vw;max-height:92vh}
+dialog::backdrop{background:rgba(0,0,0,.94)}
+dialog img{max-height:88vh;width:auto}
+dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff;font-family:var(--ui);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.6rem 1rem;cursor:pointer}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  :root{--bar-h:4.25rem}
+  .list,.pair,.small-reviews{grid-template-columns:1fr}
+  .specs .wrap{grid-template-columns:1fr 1fr}
+  .specs div:nth-child(3){border-left:0}
+  .specs div:nth-child(-n+2){border-bottom:1px solid var(--hair)}
+  .steps{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  .cap{grid-template-columns:1fr}
+  .cap .meta{text-align:left}
+  .bar .wrap{gap:.9rem}
+  .brand .name{font-size:1.05rem}
+  .brand .name span{display:none}
+  .brand img{height:2rem}
+  nav{display:none}
+  nav.open{
+    display:flex;position:absolute;top:100%;left:0;right:0;background:var(--brand);
+    flex-direction:column;align-items:flex-start;gap:0;padding:.25rem var(--pad) 1.25rem;
+    border-top:1px solid rgba(255,255,255,.15);
+  }
+  nav.open a{padding:.9rem 0;width:100%;border-bottom:1px solid rgba(255,255,255,.12)}
+  nav.open .navcta{display:block;border-bottom:0;color:#fff;margin-top:.5rem}
+  .menu-btn{display:block;order:3}
+  .bar .btn{display:none}
+  .mini{display:inline}
+  .item{padding:1.4rem 0}
+}
+@media(max-width:560px){
+  .hero{min-height:74vh;min-height:min(78svh,680px)}
+  .steps{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr}
+  .foot,.specs .wrap{grid-template-columns:1fr}
+  .specs div{border-left:0;border-bottom:1px solid var(--hair);padding:1.5rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+@media print{
+  .bar,.skip,.menu-btn,.scrim,.hero .shot,.quote form,dialog{display:none!important}
+  .hero{min-height:0;color:var(--ink)}
+  .hero h1,.hero .lede,.hero .kicker{color:var(--ink)}
+  section{padding-block:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap">
+    <!-- FILL: drop your logo at images/logo.svg (a white or single-colour version reads best on the olive bar) -->
+    <a class="brand" href="#top">
+      <img src="images/logo.svg" alt="" onerror="this.style.display='none'">
+      <span class="name">On The Roll Painters<span>Affordable professional quality painting</span></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#quote" class="navcta">Request a quote</a>
+    </nav>
+    <a class="mini" href="#quote">Quote</a>
+    <a class="btn btn-outline btn-sm" href="#quote">Request a quote</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <figure class="shot">
+    <img src="images/hero.jpg" alt="A kitchen with freshly painted white cabinets and dark counters" fetchpriority="high" decoding="async" onerror="this.classList.add('missing')">
+    <span class="ph" aria-hidden="true"><b>images/hero.jpg</b>Your strongest photograph, landscape, shot in good light</span>
+  </figure>
+  <div class="scrim"></div>
+  <div class="hero-inner wrap">
+    <p class="caps kicker">Serving Barrie, Innisfil, Orillia &amp; Springwater</p>
+    <h1>One house at a time.</h1>
+    <p class="lede">The same person quotes the job, preps it and paints it. No subcontractors, no crew you've never met.</p>
+    <a class="btn btn-outline" href="#quote">Request a quote</a>
+  </div>
+</section>
+
+<div class="specs">
+  <div class="wrap">
+    <!-- FILL: these are promises, not history, so they are all true from day one.
+         When you get liability insurance, add a fourth panel here:
+         <div><b>Insured</b><span class="caps">$2M liability coverage</span></div>
+         and change .specs .wrap to repeat(4,1fr) in the CSS above. -->
+    <div><b>One painter</b><span class="caps">On site every day</span></div>
+    <div><b>Fixed price</b><span class="caps">In writing, before work begins</span></div>
+    <div><b>Year round</b><span class="caps">Inside in winter, decks in summer</span></div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="narrow">
+      <p class="caps">Previous work</p>
+      <h2>A few finished jobs.</h2>
+    </div>
+
+    <!-- FILL: one plate per completed project. The captions below describe what is visible
+         in each photo and nothing more — add the detail only you know (what was wrong,
+         what you did first, how long it took) and keep it true. The right-hand line
+         describes scope rather than dates or addresses. To add a town for the local-search
+         benefit, "Barrie" reads fine; "Barrie · 9 days" is a claim you then have to stand
+         behind. Photos are portrait pairs; to use a landscape photo on its own, copy the
+         single-plate markup from the git history or ask. -->
+    <div class="plate pair">
+      <div>
+        <figure class="shot">
+          <img src="images/work-01.jpg" alt="Staircase with white-painted risers and spindles and bare wood treads" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <span class="ph" aria-hidden="true"><b>images/work-01.jpg</b>Portrait</span>
+        </figure>
+        <div class="cap">
+          <div>
+            <h3>Staircase and railings</h3>
+            <p>Risers, stringers, spindles and newel posts painted white. Treads and handrail left as wood.</p>
+          </div>
+          <div class="meta caps">Stairs &amp; railings</div>
+        </div>
+      </div>
+      <div>
+        <figure class="shot">
+          <img src="images/work-02.jpg" alt="Freshly painted two-storey stairwell" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <span class="ph" aria-hidden="true"><b>images/work-02.jpg</b>Portrait</span>
+        </figure>
+        <div class="cap">
+          <div>
+            <h3>Two-storey stairwell</h3>
+            <p>Walls and ceiling through a tall stairwell, painted before the stairs were finished.</p>
+          </div>
+          <div class="meta caps">Walls &amp; ceilings</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="plate pair">
+      <div>
+        <figure class="shot">
+          <img src="images/work-03.jpg" alt="Multi-level backyard deck, newly stained in two tones" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <span class="ph" aria-hidden="true"><b>images/work-03.jpg</b>Portrait</span>
+        </figure>
+        <div class="cap">
+          <div>
+            <h3>Deck staining</h3>
+            <p>Multi-level deck and steps stained in two tones, the border boards picked out lighter.</p>
+          </div>
+          <div class="meta caps">Deck</div>
+        </div>
+      </div>
+      <div>
+        <figure class="shot">
+          <img src="images/work-04.jpg" alt="White-painted kitchen cabinets and drawers around a sink" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <span class="ph" aria-hidden="true"><b>images/work-04.jpg</b>Portrait</span>
+        </figure>
+        <div class="cap">
+          <div>
+            <h3>Kitchen cabinets</h3>
+            <p>Oak doors, drawer fronts and boxes painted white. Counters, sink and floor stayed as they were.</p>
+          </div>
+          <div class="meta caps">Kitchen</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- To add more jobs, copy a pair above and change the images and captions. -->
+  </div>
+</section>
+
+<section class="stone" id="beforeafter">
+  <div class="wrap">
+    <div class="narrow">
+      <p class="caps">Before &amp; after</p>
+      <h2>Prep is most of the job.</h2>
+      <!-- FILL: this describes what the two photos show. Add what only you know — what
+           was wrong with the old finish, what you did first, how many days — and keep it
+           true. This is the most persuasive paragraph on the site, so be concrete. -->
+      <p>A kitchen of original oak cabinets — doors, drawer fronts and boxes — taken to white. Same kitchen, same layout. Nothing torn out.</p>
+    </div>
+
+    <div class="pair ba-pair">
+      <div>
+        <p class="caps pair-label">Before</p>
+        <figure class="shot">
+          <img src="images/before.jpg" alt="Kitchen with original oak cabinets, before painting" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <span class="ph" aria-hidden="true"><b>images/before.jpg</b>Before</span>
+        </figure>
+      </div>
+      <div>
+        <p class="caps pair-label">After</p>
+        <figure class="shot">
+          <img src="images/after.jpg" alt="The same kitchen with the cabinets painted white" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <span class="ph" aria-hidden="true"><b>images/after.jpg</b>After</span>
+        </figure>
+      </div>
+    </div>
+
+    <div class="cap ba-cap">
+      <!-- FILL: confirm this matches how the job was actually done. -->
+      <div><p>Cabinets take more prep than anything else in a house. Kitchen grease has to come off before anything will stick, oak grain needs sealing or it shows through, and the finish has to stand up to being wiped down for years. That's where the time goes, not the top coats.</p></div>
+      <div class="meta caps">Kitchen</div>
+    </div>
+
+    <p class="cta-row"><a class="btn" href="#quote">Request a quote</a></p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="narrow">
+      <p class="caps">Services</p>
+      <h2>What gets done.</h2>
+      <p>One job at a time, inside or out. Patching, sanding and caulking are in the price. No change orders halfway through.</p>
+    </div>
+
+    <!-- FILL: this list matches the business card. If you drop or add a service, change
+         the form's checkboxes further down and the "knowsAbout" list in the <head> too. -->
+    <div class="list">
+      <article class="item">
+        <h3>Walls &amp; ceilings</h3>
+        <p>Rooms that need a refresh. Furniture covered, floors papered, edges cut by hand. Holes and cracks filled before the first coat.</p>
+      </article>
+      <article class="item">
+        <h3>Kitchen cabinets</h3>
+        <p>Doors, drawer fronts and boxes, taken from dated oak to a colour that suits the room. Prepped so the finish stands up to being wiped down.</p>
+      </article>
+      <article class="item">
+        <h3>Deck staining</h3>
+        <p>Decks, steps and railings, stained or sealed. Needs warm, dry weather, so it books up for summer.</p>
+      </article>
+      <article class="item">
+        <h3>Stairs, railings &amp; trim</h3>
+        <p>Baseboards, casings, doors, stair rails and spindles. Slow work, and it's the first thing people notice.</p>
+      </article>
+      <article class="item">
+        <h3>Closets &amp; built-ins</h3>
+        <p>Shelving, rods and the inside of the door. Small jobs, done on their own or tacked onto a room.</p>
+      </article>
+      <article class="item">
+        <h3>Furniture refinishing</h3>
+        <p>Small pieces: dressers, side tables, chairs. Sanded back and repainted or restained.</p>
+      </article>
+      <article class="item">
+        <h3>Drywall &amp; mudding</h3>
+        <p>Nail pops, cracks, water stains and patchwork mudded, sanded and blended before paint goes on.</p>
+      </article>
+      <article class="item">
+        <h3>Backsplash installation</h3>
+        <p>Kitchen backsplashes set and grouted, usually as the last step of a cabinet job.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="stone">
+  <div class="wrap">
+    <div class="narrow">
+      <p class="caps">Process</p>
+      <h2>How a job runs.</h2>
+      <p>No deposit before you've seen a number in writing.</p>
+    </div>
+    <div class="steps">
+      <article class="step"><h3>Get in touch</h3><p>Form or email, either works. Photos help. Not required.</p></article>
+      <article class="step"><h3>Walkthrough</h3><p>Measuring up, and a straight answer about what needs fixing before paint.</p></article>
+      <article class="step"><h3>Written quote</h3><p>A fixed price, itemised, usually back the next day.</p></article>
+      <article class="step"><h3>Prep and paint</h3><p>Everything covered and masked before a lid comes off. Cleaned up every evening.</p></article>
+      <article class="step"><h3>Final walkthrough</h3><p>Room by room, together. Touch-ups get done before the invoice, not after.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <figure class="shot">
+      <!-- FILL: a photo of you working. Mid-job, holding a brush, not posed against a van.
+           This single image does more for a new business than any other on the page. -->
+      <img src="images/portrait.jpg" alt="Portrait of the painter at work" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+      <span class="ph" aria-hidden="true"><b>images/portrait.jpg</b>You, working. Portrait orientation</span>
+    </figure>
+    <div>
+      <p class="caps">About</p>
+      <!-- FILL: rewrite these paragraphs if the voice is not yours, but keep them in
+           third person and keep them true. Do not add "our team" or "our experienced
+           staff" — there is one painter, and that is the selling point. -->
+      <h2>One painter, start to finish.</h2>
+      <p>On The Roll Painters is new. It's run by Lexis Carter, who does all of the work.</p>
+      <p>No foreman, no crew rotating through, nobody in the house you haven't already met. One job at a time, so yours isn't getting rushed to reach the next one.</p>
+      <!-- FILL: adjust this line to match the projects you have actually completed, or delete it. -->
+      <p>Previous jobs have run from a single closet to a whole kitchen, with stairwells, railings and decks along the way.</p>
+      <p>Inside work carries on through the winter while the exterior crews sit still, so a room that's been waiting since the fall can get booked now. Decks and doors wait for the warm months.</p>
+      <p>If a finish fails because of how it went on, it gets fixed. That's the warranty. There's no small print under it.</p>
+      <p class="signoff">Taking on work now.</p>
+      <p class="cta-row"><a class="btn" href="#quote">Request a quote</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REVIEWS — add this section back once you have two or three real ones.
+     Paste it directly above the quote section below, and use real first names.
+     Ask every client for a Google review the day you finish. It is the single
+     highest-value thing you can do in your first year.
+
+<section id="reviews" class="stone">
+  <div class="wrap centered">
+    <p class="caps">Clients</p>
+    <blockquote class="pull">Your best review goes here, in full.</blockquote>
+    <p class="caps attrib">First name · Town</p>
+    <div class="small-reviews">
+      <div>
+        <p>A second review.</p>
+        <p class="caps">First name · Town</p>
+      </div>
+      <div>
+        <p>A third review.</p>
+        <p class="caps">First name · Town</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+     ============================================================ -->
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="qhead">
+      <p class="caps">Request a quote</p>
+      <h2>Every quote starts with a visit.</h2>
+      <p class="lead">Free, anywhere in Barrie, Innisfil, Orillia or Springwater, and nobody chases you afterwards. Most quotes go out the next day. Or email <a href="mailto:ontherollpainter@gmail.com">ontherollpainter@gmail.com</a>.</p>
+    </div>
+
+    <!-- FILL: replace YOUR_FORM_ID with your Formspree endpoint — see README -->
+    <form id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="row">
+        <div><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+        <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="row">
+        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div><label for="area">Town or postal code</label><input id="area" name="area" type="text" autocomplete="postal-code"></div>
+      </div>
+
+      <fieldset>
+        <legend>What needs painting</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="work[]" value="Walls and ceilings"> Walls &amp; ceilings</label>
+          <label><input type="checkbox" name="work[]" value="Whole house"> Whole house</label>
+          <label><input type="checkbox" name="work[]" value="Cabinets"> Cabinets</label>
+          <label><input type="checkbox" name="work[]" value="Stairs, railings and trim"> Stairs, railings &amp; trim</label>
+          <label><input type="checkbox" name="work[]" value="Deck staining"> Deck staining</label>
+          <label><input type="checkbox" name="work[]" value="Closets"> Closets</label>
+          <label><input type="checkbox" name="work[]" value="Furniture"> Furniture</label>
+          <label><input type="checkbox" name="work[]" value="Backsplash"> Backsplash</label>
+          <label><input type="checkbox" name="work[]" value="Repairs"> Repairs</label>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="when">Timing</label>
+        <select id="when" name="timeline">
+          <option>As soon as possible</option>
+          <option>Within a month</option>
+          <option>In the next few months</option>
+          <option>Pricing it out for now</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="details">Anything else</label>
+        <textarea id="details" name="details" placeholder="How many rooms, roughly what size, any colours in mind, anything that needs fixing first."></textarea>
+      </div>
+
+      <input type="hidden" name="_subject" value="Quote request from ontherollpainter.ca">
+      <input type="text" name="_gotcha" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Send request</button>
+      <p class="fine">Details go to one inbox and nowhere else. Photos are welcome by email.</p>
+      <p class="formnote" id="formnote" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="mark">On The Roll Painters</div>
+        <p class="blurb">Affordable professional quality painting. Serving Barrie, Innisfil, Orillia and Springwater.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <!-- No phone number or address on the site, by request. Email and the form only. -->
+          <li><a href="mailto:ontherollpainter@gmail.com">ontherollpainter@gmail.com</a></li>
+          <li><a href="#quote">Request a quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Areas served</h4>
+        <!-- FILL: delete any town you would not actually drive to. This list is a large
+             part of how you get found in local search, so keep it honest and specific. -->
+        <ul>
+          <li>Barrie</li>
+          <li>Innisfil</li>
+          <li>Orillia</li>
+          <li>Springwater</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; <span id="yr">2026</span> On The Roll Painters</span>
+      <!-- FILL: add "Fully insured ·" in front once you have a policy. Not before. -->
+      <span>Free estimates</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="lb" aria-labelledby="lb-title">
+  <p id="lb-title" class="sr-only">Enlarged photo</p>
+  <button class="close" type="button" autofocus>Close</button>
+</dialog>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---------- mobile menu ---------- */
+const menuBtn = document.querySelector('.menu-btn');
+const nav = document.getElementById('nav');
+const setMenu = open => {
+  nav.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+};
+menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+nav.addEventListener('click', e => { if (e.target.tagName === 'A') setMenu(false); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); }
+});
+document.addEventListener('click', e => {
+  if (nav.classList.contains('open') && !e.target.closest('.bar')) setMenu(false);
+});
+
+/* ---------- lightbox: only wired up once a real image has loaded ---------- */
+const lb = document.getElementById('lb');
+const lbImg = document.createElement('img');
+lbImg.alt = '';
+lb.append(lbImg);
+document.querySelectorAll('#work .shot, #beforeafter .shot').forEach(fig => {
+  const img = fig.querySelector('img');
+  const open = () => {
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt;
+    lb.showModal();
+  };
+  const enable = () => {
+    if (img.naturalWidth === 0) return;
+    fig.classList.add('zoomable');
+    fig.tabIndex = 0;
+    fig.setAttribute('role', 'button');
+    fig.setAttribute('aria-label', 'Enlarge: ' + img.alt);
+    fig.addEventListener('click', open);
+    fig.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  };
+  if (img.complete) enable(); else img.addEventListener('load', enable, { once: true });
+});
+lb.querySelector('.close').addEventListener('click', () => lb.close());
+lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+lb.addEventListener('close', () => { lbImg.removeAttribute('src'); });
+
+/* ---------- quote form ---------- */
+const form = document.getElementById('quoteForm');
+const note = document.getElementById('formnote');
+const emailText = document.querySelector('footer a[href^="mailto:"]').textContent.trim();
+const say = msg => { note.textContent = msg; note.classList.add('show'); };
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (form.getAttribute('action').includes('YOUR_FORM_ID')) {
+    say('The form isn’t connected yet. Add your Formspree ID to the form action.');
+    return;
+  }
+  const btn = form.querySelector('button[type=submit]');
+  btn.disabled = true; btn.textContent = 'Sending';
+  try {
+    const res = await fetch(form.getAttribute('action'), {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+    if (!res.ok) throw new Error('Form service returned ' + res.status);
+    form.classList.add('sent');
+    say('Got it. Expect a reply within a day.');
+  } catch (err) {
+    btn.disabled = false; btn.textContent = 'Send request';
+    say('That didn’t send. Email ' + emailText + ' instead.');
+  }
+});
+</script>
+</body>
+</html>
