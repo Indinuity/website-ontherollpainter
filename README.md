@@ -25,7 +25,7 @@ marked. The short list:
 
 | What | Where it appears | Currently says |
 |---|---|---|
-| Project captions | four photos in "Previous work" | describe what's visible in each photo; add what only you know |
+| Project captions | four items in "Previous work" (two are before/after sliders) | describe what's visible in each photo; add what only you know |
 | Before & after | the paragraph and caption under the Swan kitchen photos | same — confirm it matches how the job went |
 | Services | the eight items in "What gets done" | matched to your business card; edit if that changes |
 | Stats bar | three panels under the hero | add insurance once you have it |
@@ -59,13 +59,20 @@ phone are the header, the quote section lead, the footer contact list, and the
 | `og-image.jpg` | the same photo, cropped 1200×630 | link previews on social and in messages |
 | `work-01.jpg` | IMG_6948 (log-home staircase) | Previous work, first pair |
 | `work-02.jpg` | IMG_6139 (tall stairwell) | Previous work, first pair |
-| `work-03.jpg` | IMG_6826 (two-tone deck) | Previous work, second pair |
-| `work-04.jpg` | Barbs kitchen after (5) | Previous work, second pair |
-| `before.jpg` | Swan house b4 | Before & after |
-| `after.jpg` | Swan house after (2) | Before & after |
+| `work-03-before.jpg` / `-after.jpg` | Deck Stain B4 / Deck Stain After | Previous work, deck slider |
+| `work-04-before.jpg` / `-after.jpg` | Swan house b4 / Swan house after (2) | Previous work, cabinets slider |
+| `before.jpg` | Barbs kitchen (2) | Before & after |
+| `after.jpg` | Barbs kitchen after (5) | Before & after |
 
-Visitors can click or tap any of those to see it full-size. To swap one, run the prep
-script (below) on a different original with the same slot name.
+The two sliders reveal the "after" as you drag, hover, or press the arrow keys. A slider
+only works when both photos are of the same thing from roughly the same spot — the deck
+steps and the Swan kitchen (same microwave in both) qualify; the Barbs kitchen photos are
+from different angles, so they sit side by side instead.
+
+Visitors can click or tap the single photos to see them full-size. To swap one, run the
+prep script (below) on a different original with the same slot name. IMG_6826 (the
+two-tone multi-level deck) is a strong photo with no "before"; it's worth a spot if you
+ever want a third pair.
 
 **Still needed:**
 
@@ -98,9 +105,10 @@ python3 tools/prep-photo.py "path/to/original.jpg" work-01
 ```
 
 That writes `images/work-01.jpg` at web size with all metadata stripped. Use `hero`,
-`portrait`, `work-01` … `work-04`, `before`, `after` or `og-image` as the second word.
-The four `work-` slots are portrait pairs; a landscape photo dropped into one is shown
-centre-cropped on the page and in full when clicked.
+`portrait`, `work-01` … `work-04`, `before`, `after` or `og-image` as the second word; for
+a slider, `work-03-before` and `work-03-after`. The `work-` slots are portrait pairs; a
+landscape photo dropped into one is shown centre-cropped on the page and in full when
+clicked.
 (Needs Python with Pillow: `python3 -m pip install pillow`. squoosh.app in the browser
 also works — it re-encodes the image, which drops the metadata — but name the output
 file yourself.)
@@ -250,6 +258,8 @@ For whoever is editing the HTML directly:
   limestone backgrounds; if you lighten it, small caption text stops passing.
 - **Adding a new image slot.** If `index.html` gains a new `<img src="images/...">`, add a
   matching `!images/name.jpg` line to `.gitignore` or git will refuse to see the file.
-  `work-05.jpg`, `work-06.jpg` and so on are already allowed.
+  `work-05.jpg`, `work-05-before.jpg` and so on are already allowed.
+- **Sliders.** The before/after slider is plain HTML + a range input (see the comment
+  above the second pair in `index.html`). Without JavaScript it shows a fixed 50/50 split.
 - **Raw originals** left in `images/` on your machine are harmless — git ignores them —
   but keep the real originals somewhere safer than a website folder.

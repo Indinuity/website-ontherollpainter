@@ -188,6 +188,29 @@ nav a:hover{color:#fff}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem)}
 .pair .shot{aspect-ratio:4/5}
 .pair-label{margin-bottom:1rem}
+
+/* ---------- before/after slider ----------
+   Two photos stacked; the "after" is clipped at --pos. A full-size transparent range
+   input drives it, so it works by drag, touch, and arrow keys. On a mouse, the split
+   also follows the pointer. Without JS it sits at 50/50. */
+.compare{--pos:50%;cursor:ew-resize}
+.compare img{position:absolute;inset:0}
+.compare .after{clip-path:inset(0 0 0 var(--pos))}
+.compare .tag{
+  position:absolute;top:.75rem;z-index:3;pointer-events:none;
+  font-family:var(--ui);font-weight:400;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+  color:#fff;background:rgba(36,31,26,.65);padding:.35rem .6rem;
+}
+.compare .tag-b{left:.75rem}
+.compare .tag-a{right:.75rem}
+.compare .divider{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;z-index:3;pointer-events:none;box-shadow:0 0 0 1px rgba(36,31,26,.2)}
+.compare .divider::after{
+  content:"\2039\2009\203A";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:2.5rem;height:2.5rem;border-radius:50%;background:#fff;color:var(--ink);
+  font-family:var(--ui);font-size:1.1rem;line-height:2.5rem;text-align:center;box-shadow:0 1px 6px rgba(36,31,26,.3);
+}
+.compare input{position:absolute;inset:0;z-index:4;width:100%;height:100%;margin:0;padding:0;opacity:0;cursor:ew-resize;touch-action:pan-y;-webkit-appearance:none;appearance:none}
+.compare:has(input:focus-visible){outline:2px solid var(--ink);outline-offset:4px}
 .ba-pair{margin-top:clamp(2.5rem,6vw,4rem)}
 .ba-cap{margin-top:1.5rem}
 
@@ -417,31 +440,45 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
       </div>
     </div>
 
+    <!-- Before/after sliders. Each needs two photos of the same subject from roughly the
+         same spot: images/work-NN-before.jpg and images/work-NN-after.jpg. Drag, hover,
+         or use the arrow keys. To turn a slider back into a single photo, copy a figure
+         from the pair above. -->
     <div class="plate pair">
       <div>
-        <figure class="shot">
-          <img src="images/work-03.jpg" alt="Multi-level backyard deck, newly stained in two tones" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
-          <span class="ph" aria-hidden="true"><b>images/work-03.jpg</b>Portrait</span>
+        <figure class="shot compare">
+          <img class="before" src="images/work-03-before.jpg" alt="Front porch steps before staining: bare wood weathered to grey" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <img class="after" src="images/work-03-after.jpg" alt="The same steps after staining, a deep brown" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <span class="ph" aria-hidden="true"><b>images/work-03-before.jpg + -after.jpg</b>Before and after, same angle</span>
+          <span class="tag tag-b" aria-hidden="true">Before</span>
+          <span class="tag tag-a" aria-hidden="true">After</span>
+          <span class="divider" aria-hidden="true"></span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after: slide to reveal">
         </figure>
         <div class="cap">
           <div>
             <h3>Deck staining</h3>
-            <p>Multi-level deck and steps stained in two tones, the border boards picked out lighter.</p>
+            <p>Front steps, weathered to grey, brought back with a deep brown stain.</p>
           </div>
-          <div class="meta caps">Deck</div>
+          <div class="meta caps">Slide to compare</div>
         </div>
       </div>
       <div>
-        <figure class="shot">
-          <img src="images/work-04.jpg" alt="White-painted kitchen cabinets and drawers around a sink" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
-          <span class="ph" aria-hidden="true"><b>images/work-04.jpg</b>Portrait</span>
+        <figure class="shot compare">
+          <img class="before" src="images/work-04-before.jpg" alt="Kitchen with original oak cabinets around the stove, before painting" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <img class="after" src="images/work-04-after.jpg" alt="The same kitchen with the cabinets painted white" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <span class="ph" aria-hidden="true"><b>images/work-04-before.jpg + -after.jpg</b>Before and after, same angle</span>
+          <span class="tag tag-b" aria-hidden="true">Before</span>
+          <span class="tag tag-a" aria-hidden="true">After</span>
+          <span class="divider" aria-hidden="true"></span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after: slide to reveal">
         </figure>
         <div class="cap">
           <div>
             <h3>Kitchen cabinets</h3>
-            <p>Oak doors, drawer fronts and boxes painted white. Counters, sink and floor stayed as they were.</p>
+            <p>Original oak doors, drawer fronts and boxes painted white. Same boxes, same layout, same microwave.</p>
           </div>
-          <div class="meta caps">Kitchen</div>
+          <div class="meta caps">Slide to compare</div>
         </div>
       </div>
     </div>
@@ -465,14 +502,14 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
       <div>
         <p class="caps pair-label">Before</p>
         <figure class="shot">
-          <img src="images/before.jpg" alt="Kitchen with original oak cabinets, before painting" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <img src="images/before.jpg" alt="Kitchen with original oak cabinets around the sink, before painting" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
           <span class="ph" aria-hidden="true"><b>images/before.jpg</b>Before</span>
         </figure>
       </div>
       <div>
         <p class="caps pair-label">After</p>
         <figure class="shot">
-          <img src="images/after.jpg" alt="The same kitchen with the cabinets painted white" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+          <img src="images/after.jpg" alt="The same kitchen, cabinets and drawers painted white" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
           <span class="ph" aria-hidden="true"><b>images/after.jpg</b>After</span>
         </figure>
       </div>
@@ -728,7 +765,7 @@ const lb = document.getElementById('lb');
 const lbImg = document.createElement('img');
 lbImg.alt = '';
 lb.append(lbImg);
-document.querySelectorAll('#work .shot, #beforeafter .shot').forEach(fig => {
+document.querySelectorAll('#work .shot:not(.compare), #beforeafter .shot:not(.compare)').forEach(fig => {
   const img = fig.querySelector('img');
   const open = () => {
     lbImg.src = img.currentSrc || img.src;
@@ -751,6 +788,25 @@ document.querySelectorAll('#work .shot, #beforeafter .shot').forEach(fig => {
 lb.querySelector('.close').addEventListener('click', () => lb.close());
 lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
 lb.addEventListener('close', () => { lbImg.removeAttribute('src'); });
+
+/* ---------- before/after sliders ---------- */
+const hoverFollows = matchMedia('(hover:hover) and (pointer:fine)').matches;
+document.querySelectorAll('.compare').forEach(fig => {
+  const range = fig.querySelector('input[type=range]');
+  const set = v => {
+    v = Math.round(Math.max(0, Math.min(100, v)));
+    range.value = v;
+    fig.style.setProperty('--pos', v + '%');
+    range.setAttribute('aria-valuetext', v + '% before, ' + (100 - v) + '% after');
+  };
+  range.addEventListener('input', () => set(+range.value));
+  if (hoverFollows) fig.addEventListener('pointermove', e => {
+    if (e.pointerType !== 'mouse') return;
+    const r = fig.getBoundingClientRect();
+    set((e.clientX - r.left) / r.width * 100);
+  });
+  set(+range.value);
+});
 
 /* ---------- quote form ---------- */
 const form = document.getElementById('quoteForm');

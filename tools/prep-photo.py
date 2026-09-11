@@ -9,7 +9,8 @@ phone photos carry the GPS coordinates of where they were taken, which is the
 customer's house. The original is left untouched.
 
 Allowed slot names match what index.html references: hero, portrait, work-01 …,
-before, after, og-image. og-image is cropped to 1200×630 for social previews.
+before, after, og-image. A before/after slider plate takes two files, e.g.
+work-03-before and work-03-after. og-image is cropped to 1200×630 for social previews.
 
 Needs Pillow:  python3 -m pip install pillow
 """
@@ -21,7 +22,7 @@ from PIL import Image, ImageOps
 
 LONG_EDGE = 1600
 QUALITY = 82
-SLOTS = re.compile(r"^(hero|portrait|work-\d{2}|before|after|og-image)$")
+SLOTS = re.compile(r"^(hero|portrait|work-\d{2}(-before|-after)?|before|after|og-image)$")
 
 
 def main() -> int:
