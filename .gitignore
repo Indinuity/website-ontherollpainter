@@ -14,15 +14,21 @@ desktop.ini
 # web-ready copy under one of the allowed names — see README section 2.
 images/*
 !images/.gitkeep
+# brand assets (from the logo package)
 !images/logo.svg
-!images/logo.png
+!images/logo-full.svg
+!images/logo-stacked.svg
+!images/favicon.svg
+!images/favicon.png
+!images/apple-touch-icon.png
+!images/icon-192.png
+!images/og-image.png
+# photos, always made with tools/prep-photo.py
 !images/hero.jpg
-!images/portrait.jpg
+!images/about.jpg
 !images/work-*.jpg
 !images/before.jpg
 !images/after.jpg
-!images/og-image.jpg
-!images/favicon.png
 
 # Design originals
 *.psd

@@ -8,7 +8,7 @@ camera intended, re-encoded as a progressive JPEG, and with ALL metadata dropped
 phone photos carry the GPS coordinates of where they were taken, which is the
 customer's house. The original is left untouched.
 
-Allowed slot names match what index.html references: hero, portrait, work-01 …,
+Allowed slot names match what index.html references: hero, about, work-01 …,
 before, after, og-image. A before/after slider plate takes two files, e.g.
 work-03-before and work-03-after. og-image is cropped to 1200×630 for social previews.
 
@@ -22,7 +22,7 @@ from PIL import Image, ImageOps
 
 LONG_EDGE = 1600
 QUALITY = 82
-SLOTS = re.compile(r"^(hero|portrait|work-\d{2}(-before|-after)?|before|after|og-image)$")
+SLOTS = re.compile(r"^(hero|about|work-\d{2}(-before|-after)?|before|after|og-image)$")
 
 
 def main() -> int:

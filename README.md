@@ -7,8 +7,10 @@ edit it in GitHub's web editor and the change is live in about a minute.
 index.html          the whole site
 404.html            what a visitor sees if they follow a bad link
 CNAME               tells GitHub which domain to serve
-images/             your logo and photos go here (web-ready copies only — see section 2)
+images/             logo files and web-ready photos (see section 2)
+brand/              the full logo package and brand sheet — source files, not used by the page
 tools/prep-photo.py makes a web-ready copy of a photo: resized, and location data removed
+site.webmanifest    name and icon for "add to home screen" on phones
 robots.txt          tells search engines they may index the site
 sitemap.xml         tells search engines the one page that exists
 .nojekyll           tells GitHub to serve the files as-is
@@ -42,16 +44,35 @@ Already filled in, as requested:
 - Tagline: **Affordable Professional Quality Painting** (header, hero, footer, social previews)
 - Service area: **Barrie, Innisfil, Orillia, Springwater** (hero, quote section, footer, page title, structured data)
 - Email: **ontherollpainter@gmail.com** (quote section and footer)
-- Owner: **Lexis Carter** (About section)
+- Owner: **Lexis Carter** (About section — spelled as on the business card)
+- Logo, favicon and link-preview card, from the logo package (see section 2)
 
-**No phone number or address appears anywhere on the site, by request.** The contact
-routes are the form and the email address. If that changes later, the places to add a
+**No phone number, address, or photo of the painter appears anywhere on the site, by
+request.** The contact routes are the form and the email address. If that changes later, the places to add a
 phone are the header, the quote section lead, the footer contact list, and the
 `"telephone"` field in the structured data. Don't add one without asking first.
 
 ## 2. Logo and photos
 
-**In place**, made from the photos you sent (web-sized, location data removed):
+**Brand files in place**, from the logo package. The full package (every lockup, colour
+variant and size, plus the brand sheet) is kept in `brand/` so it can't get lost; the page
+only uses the copies in `images/`:
+
+| File | What it is | Where it shows |
+|---|---|---|
+| `logo.svg` | horizontal lockup, reversed | header, on the olive bar |
+| `logo-stacked.svg` | stacked lockup, reversed | footer |
+| `logo-full.svg` | primary stacked lockup | structured data (what Google shows as the logo) |
+| `favicon.svg`, `favicon.png` | the badge icon | browser tab |
+| `apple-touch-icon.png`, `icon-192.png` | the badge icon | phone home screens |
+| `og-image.png` | the link-preview card | when the link is shared or texted |
+
+The link-preview card was rebuilt from the package's own layout with the tagline
+corrected: the supplied one read "Interior house painting · Barrie & Simcoe County",
+which no longer matches the services. The original is at `brand/og-image.png` if you'd
+rather use it.
+
+**Photos in place**, made from the photos you sent (web-sized, location data removed):
 
 | File | Made from | Where it shows |
 |---|---|---|
@@ -63,6 +84,7 @@ phone are the header, the quote section lead, the footer contact list, and the
 | `work-04-before.jpg` / `-after.jpg` | Swan house b4 / Swan house after (2) | Previous work, cabinets slider |
 | `before.jpg` | Barbs kitchen (2) | Before & after |
 | `after.jpg` | Barbs kitchen after (5) | Before & after |
+| `about.jpg` | IMG_6826 (two-tone deck) | About section |
 
 The two sliders reveal the "after" as you drag, hover, or press the arrow keys. A slider
 only works when both photos are of the same thing from roughly the same spot — the deck
@@ -70,20 +92,11 @@ steps and the Swan kitchen (same microwave in both) qualify; the Barbs kitchen p
 from different angles, so they sit side by side instead.
 
 Visitors can click or tap the single photos to see them full-size. To swap one, run the
-prep script (below) on a different original with the same slot name. IMG_6826 (the
-two-tone multi-level deck) is a strong photo with no "before"; it's worth a spot if you
-ever want a third pair.
+prep script (below) on a different original with the same slot name.
 
-**Still needed:**
-
-- `logo.svg` — or `logo.png` with a transparent background. A white or single-colour
-  version reads best on the olive header bar. Aim for something legible at 40px tall.
-  (The logo on the business card would work, but as the actual artwork file, not a photo
-  of the card.)
-- `portrait.jpg` — you, working, mid-job, portrait orientation. Not posed against a van.
-  For a new business this photo does more work than any other on the page. The About
-  section shows a labelled placeholder until it exists.
-- `favicon.png` — 512×512. Used for the browser tab and the home-screen icon on phones.
+The About section deliberately shows a finished job rather than a photo of you — no
+photo of the painter goes on the site, by request. Nothing else is outstanding on the
+image side.
 
 Photos not used: the business-card shots (they show the phone number), "Swan door b4"
 (the house number and name plaque are in frame), and "Barbs kitchen" #8 (family photos on
@@ -105,7 +118,7 @@ python3 tools/prep-photo.py "path/to/original.jpg" work-01
 ```
 
 That writes `images/work-01.jpg` at web size with all metadata stripped. Use `hero`,
-`portrait`, `work-01` … `work-04`, `before`, `after` or `og-image` as the second word; for
+`about`, `work-01` … `work-04`, `before` or `after` as the second word; for
 a slider, `work-03-before` and `work-03-after`. The `work-` slots are portrait pairs; a
 landscape photo dropped into one is shown centre-cropped on the page and in full when
 clicked.
@@ -116,8 +129,9 @@ file yourself.)
 Also look at what's *in* the frame before publishing: house numbers, name plaques, mail,
 family photos on the fridge, and anything with a licence plate. Crop or skip those.
 
-Once your logo is in, send me the hex codes from it and I'll retune the palette to match —
-all the colours live in one `:root` block at the top of the file.
+The site's colours are the brand sheet's: Olive for the header, Deep Olive for the
+footer, Ink for text, and Ochre for the quote buttons and small touches. They live in one
+`:root` block at the top of `index.html`.
 
 ## 3. Making the form work
 
@@ -255,7 +269,12 @@ For whoever is editing the HTML directly:
   of anchors.
 - **Colours.** Every colour is a variable in the `:root` block at the top of `index.html`.
   The grey (`--grey`) is tuned to pass WCAG AA contrast on both the off-white and the
-  limestone backgrounds; if you lighten it, small caption text stops passing.
+  limestone backgrounds; if you lighten it, small caption text stops passing. Ochre
+  (`--accent`) fails contrast with white text, so buttons on it always use ink text —
+  don't put white text on ochre.
+- **Logo edits.** Change the files in `brand/` (the source), then copy the variant you need
+  over the matching file in `images/`. The header uses the reversed horizontal lockup
+  because the bar is olive; on a light background use `logo-horizontal.svg` instead.
 - **Adding a new image slot.** If `index.html` gains a new `<img src="images/...">`, add a
   matching `!images/name.jpg` line to `.gitignore` or git will refuse to see the file.
   `work-05.jpg`, `work-05-before.jpg` and so on are already allowed.

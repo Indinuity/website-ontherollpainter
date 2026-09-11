@@ -1,0 +1,13 @@
+{
+  "name": "On The Roll Painters",
+  "short_name": "On The Roll",
+  "description": "Affordable professional quality painting. Serving Barrie, Innisfil, Orillia and Springwater.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FCFBF8",
+  "theme_color": "#4C5847",
+  "icons": [
+    { "src": "/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/favicon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

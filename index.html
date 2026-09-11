@@ -18,24 +18,27 @@
 <meta property="og:url" content="https://ontherollpainter.ca/">
 <meta property="og:title" content="On The Roll Painters — Affordable Professional Quality Painting">
 <meta property="og:description" content="Painting, cabinet refinishing and deck staining in Barrie, Innisfil, Orillia and Springwater. Careful prep, tidy sites, and a written quote before any work starts.">
-<meta property="og:image" content="https://ontherollpainter.ca/images/og-image.jpg">
+<meta property="og:image" content="https://ontherollpainter.ca/images/og-image.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A kitchen with freshly painted white cabinets, by On The Roll Painters">
+<meta property="og:image:alt" content="On The Roll Painters — Affordable professional quality painting. Barrie, Innisfil, Orillia, Springwater.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="On The Roll Painters — Affordable Professional Quality Painting">
 <meta name="twitter:description" content="Painting, cabinet refinishing and deck staining in Barrie, Innisfil, Orillia and Springwater. Careful prep, tidy sites, and a written quote before any work starts.">
-<meta name="twitter:image" content="https://ontherollpainter.ca/images/og-image.jpg">
+<meta name="twitter:image" content="https://ontherollpainter.ca/images/og-image.png">
 
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="images/favicon.png" type="image/png" sizes="512x512">
-<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
 <!-- FILL: structured data for local search. Keep it in step with the visible page:
      same email, same towns, same services. No phone or address here, by request — do not
-     add them without asking. Add a "logo" URL once that file exists. -->
+     add them without asking. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,6 +50,7 @@
   "slogan": "Affordable Professional Quality Painting",
   "description": "Affordable professional quality painting: rooms, kitchen cabinets, stairs and railings, closets, furniture, drywall repair, backsplashes and deck staining. Serving Barrie, Innisfil, Orillia and Springwater. One painter, start to finish. Written quotes before any work starts.",
   "image": "https://ontherollpainter.ca/images/hero.jpg",
+  "logo": "https://ontherollpainter.ca/images/logo-full.svg",
   "founder": {"@type": "Person", "name": "Lexis Carter"},
   "areaServed": ["Barrie", "Innisfil", "Orillia", "Springwater"],
   "priceRange": "$",
@@ -56,20 +60,24 @@
 
 <style>
 /* ============================================================
-   PALETTE
-   Neutral throughout so the photographs carry all the colour.
-   The brand olive appears in exactly two places: header and footer.
-   Swap --brand and --brand-deep to match your logo.
+   PALETTE — from the brand sheet
+   Olive #4C5847, Ochre #C58F2B, Deep Olive #2F3730, Ink #241F1A.
+   Neutral throughout so the photographs carry the colour: olive is
+   the header, deep olive the footer, and ochre is reserved for the
+   one thing we want people to do (the quote buttons) plus small
+   touches like the slider handle. Ochre fails contrast with white
+   text, so it always carries ink text.
    ============================================================ */
 :root{
-  --ink:#241F1A;        /* umber, not black */
+  --ink:#241F1A;        /* Ink: body text on light backgrounds */
   --body:#443D35;
   --grey:#6B6156;       /* warm grey; dark enough to pass AA on both paper and stone */
   --paper:#FCFBF8;      /* warm off-white */
   --stone:#EDE8DF;      /* limestone */
   --hair:#DCD5C9;
-  --brand:#4C5847;      /* olive, header and footer only */
-  --brand-deep:#2F3730;
+  --brand:#4C5847;      /* Olive: header */
+  --brand-deep:#2F3730; /* Deep Olive: footer */
+  --accent:#C58F2B;     /* Ochre: buttons, slider handle */
 
   --display:"Bodoni Moda",Georgia,serif;
   --ui:"Jost",system-ui,sans-serif;
@@ -81,6 +89,7 @@
 }
 
 *{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--ink)}
 html{scroll-behavior:smooth;scroll-padding-top:var(--bar-h)}
 body{
   margin:0;background:var(--paper);color:var(--body);
@@ -113,6 +122,8 @@ section{padding-block:clamp(4.5rem,10vw,9rem)}
 .cta-row{margin-top:2.5rem}
 
 :focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.bar :focus-visible{outline-color:#fff}
+.quote :focus-visible,footer :focus-visible{outline-color:var(--accent)}
 
 /* keyboard users can jump past the header; invisible until focused */
 .skip{
@@ -126,10 +137,10 @@ section{padding-block:clamp(4.5rem,10vw,9rem)}
 /* ---------- header ---------- */
 .bar{position:sticky;top:0;z-index:60;background:var(--brand);color:#fff}
 .bar .wrap{display:flex;align-items:center;gap:1.75rem;min-height:var(--bar-h)}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;margin-right:auto;min-width:0}
-.brand img{height:2.3rem;width:auto}
-.brand .name{font-family:var(--display);font-weight:400;font-size:1.2rem;letter-spacing:.01em;line-height:1.15;color:#fff}
-.brand .name span{display:block;font-family:var(--ui);font-weight:300;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.78);margin-top:.15rem}
+.brand{display:flex;align-items:center;gap:1.1rem;text-decoration:none;margin-right:auto;min-width:0}
+.brand img{height:2.6rem;width:auto;display:block}
+.brand .tagline{font-family:var(--ui);font-weight:400;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.78);padding-left:1.1rem;border-left:1px solid rgba(255,255,255,.25);white-space:nowrap}
+@media(max-width:1180px){.brand .tagline{display:none}}
 nav{display:flex;gap:2rem;align-items:center}
 nav a{font-family:var(--ui);font-weight:400;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.85)}
 nav a:hover{color:#fff}
@@ -139,14 +150,13 @@ nav a:hover{color:#fff}
 
 /* ---------- buttons ---------- */
 .btn{
-  font-family:var(--ui);font-weight:400;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-  background:var(--ink);color:#fff;text-decoration:none;border:1px solid var(--ink);
+  font-family:var(--ui);font-weight:500;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  background:var(--accent);color:var(--ink);text-decoration:none;border:1px solid var(--accent);
   padding:.85rem 1.6rem;border-radius:0;cursor:pointer;display:inline-block;line-height:1;
-  transition:background .2s,color .2s;
+  transition:background .2s,color .2s,border-color .2s;
 }
-.btn:hover{background:#fff;color:var(--ink)}
-.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
-.btn-outline:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.bar .btn:hover,.hero .btn:hover{background:#fff;color:var(--ink);border-color:#fff}
 .btn-sm{padding:.6rem 1.1rem}
 
 /* ---------- photo placeholders ---------- */
@@ -206,7 +216,7 @@ nav a:hover{color:#fff}
 .compare .divider{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;z-index:3;pointer-events:none;box-shadow:0 0 0 1px rgba(36,31,26,.2)}
 .compare .divider::after{
   content:"\2039\2009\203A";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:2.5rem;height:2.5rem;border-radius:50%;background:#fff;color:var(--ink);
+  width:2.5rem;height:2.5rem;border-radius:50%;background:var(--accent);color:var(--ink);
   font-family:var(--ui);font-size:1.1rem;line-height:2.5rem;text-align:center;box-shadow:0 1px 6px rgba(36,31,26,.3);
 }
 .compare input{position:absolute;inset:0;z-index:4;width:100%;height:100%;margin:0;padding:0;opacity:0;cursor:ew-resize;touch-action:pan-y;-webkit-appearance:none;appearance:none}
@@ -270,11 +280,11 @@ legend{font-family:var(--ui);font-size:.68rem;letter-spacing:.18em;text-transfor
   border:1px solid rgba(255,255,255,.45);padding:.6rem 1rem;cursor:pointer;
   display:flex;align-items:center;gap:.5rem;
 }
-.checks input{accent-color:#fff;margin:0}
-.checks label:has(input:checked){background:#fff;color:var(--ink);border-color:#fff}
+.checks input{accent-color:var(--accent);margin:0}
+.checks label:has(input:checked){background:var(--accent);color:var(--ink);border-color:var(--accent)}
 .honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.quote .btn{background:#fff;color:var(--ink);border-color:#fff;justify-self:center;padding-inline:3rem}
-.quote .btn:hover{background:transparent;color:#fff}
+.quote .btn{justify-self:center;padding-inline:3rem}
+.quote .btn:hover{background:#fff;color:var(--ink);border-color:#fff}
 .quote .btn:disabled{opacity:.6;cursor:wait}
 .fine{font-size:.8rem;color:rgba(255,255,255,.5);text-align:center;margin:0;max-width:46ch;margin-inline:auto}
 .formnote{font-family:var(--ui);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:1rem;border:1px solid rgba(255,255,255,.4);display:none}
@@ -288,7 +298,7 @@ footer h4{font-family:var(--ui);font-weight:400;font-size:.68rem;letter-spacing:
 footer a{color:#fff;text-decoration:none}
 footer a:hover{text-decoration:underline;text-underline-offset:3px}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem;font-size:.95rem}
-.foot .mark{font-family:var(--display);font-size:1.5rem;color:#fff;margin-bottom:.75rem;line-height:1.1}
+.foot .mark{width:11rem;height:auto;display:block;margin-bottom:1.25rem}
 .foot .blurb{color:rgba(255,255,255,.6);font-size:.95rem;max-width:32ch}
 .legal{border-top:1px solid rgba(255,255,255,.15);margin-top:3rem;padding-top:1.5rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
@@ -310,9 +320,7 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
   .cap{grid-template-columns:1fr}
   .cap .meta{text-align:left}
   .bar .wrap{gap:.9rem}
-  .brand .name{font-size:1.05rem}
-  .brand .name span{display:none}
-  .brand img{height:2rem}
+  .brand img{height:2.1rem}
   nav{display:none}
   nav.open{
     display:flex;position:absolute;top:100%;left:0;right:0;background:var(--brand);
@@ -351,10 +359,9 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
 
 <header class="bar">
   <div class="wrap">
-    <!-- FILL: drop your logo at images/logo.svg (a white or single-colour version reads best on the olive bar) -->
     <a class="brand" href="#top">
-      <img src="images/logo.svg" alt="" onerror="this.style.display='none'">
-      <span class="name">On The Roll Painters<span>Affordable professional quality painting</span></span>
+      <img src="images/logo.svg" alt="On The Roll Painters" width="1580" height="368">
+      <span class="tagline">Affordable professional quality painting</span>
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main">
@@ -365,7 +372,7 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
       <a href="#quote" class="navcta">Request a quote</a>
     </nav>
     <a class="mini" href="#quote">Quote</a>
-    <a class="btn btn-outline btn-sm" href="#quote">Request a quote</a>
+    <a class="btn btn-sm" href="#quote">Request a quote</a>
   </div>
 </header>
 
@@ -381,7 +388,7 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
     <p class="caps kicker">Serving Barrie, Innisfil, Orillia &amp; Springwater</p>
     <h1>One house at a time.</h1>
     <p class="lede">The same person quotes the job, preps it and paints it. No subcontractors, no crew you've never met.</p>
-    <a class="btn btn-outline" href="#quote">Request a quote</a>
+    <a class="btn" href="#quote">Request a quote</a>
   </div>
 </section>
 
@@ -591,11 +598,10 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
 
 <section id="about">
   <div class="wrap about-grid">
+    <!-- No photo of the painter on the site, by request. A finished job sits here instead. -->
     <figure class="shot">
-      <!-- FILL: a photo of you working. Mid-job, holding a brush, not posed against a van.
-           This single image does more for a new business than any other on the page. -->
-      <img src="images/portrait.jpg" alt="Portrait of the painter at work" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
-      <span class="ph" aria-hidden="true"><b>images/portrait.jpg</b>You, working. Portrait orientation</span>
+      <img src="images/about.jpg" alt="Two-tone multi-level deck and steps, freshly stained" loading="lazy" decoding="async" onerror="this.classList.add('missing')">
+      <span class="ph" aria-hidden="true"><b>images/about.jpg</b>A finished job, portrait orientation</span>
     </figure>
     <div>
       <p class="caps">About</p>
@@ -705,7 +711,7 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
   <div class="wrap">
     <div class="foot">
       <div>
-        <div class="mark">On The Roll Painters</div>
+        <img class="mark" src="images/logo-stacked.svg" alt="On The Roll Painters" width="1212" height="611">
         <p class="blurb">Affordable professional quality painting. Serving Barrie, Innisfil, Orillia and Springwater.</p>
       </div>
       <div>
