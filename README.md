@@ -55,19 +55,27 @@ phone are the header, the quote section lead, the footer contact list, and the
 ## 2. Logo and photos
 
 **Brand files in place.** The logo is the paint-swipe script mark from the business card
-— navy swipe, gold lettering, green roller. The full package is kept in `brand/` so it
-can't get lost: `brand/logo-card/` (the two-line mark), `brand/logo-script/` (the
-single-line version) and `brand/logo/` (an earlier olive block-capitals set, not used).
-The page only uses the copies in `images/`:
+in its current colours — olive swipe, gold lettering, navy roller. The full package is
+kept in `brand/` so it can't get lost: `brand/logo-card/` (the two-line mark, current
+colours), `brand/logo-script/` (the single-line version — still in the older navy/lime
+colours) and `brand/logo/` (an earlier block-capitals set). The page only uses the
+copies in `images/`:
 
 | File | What it is | Where it shows |
 |---|---|---|
-| `logo.svg` | single-line script mark, reversed (cream swipe) | header, on the navy bar |
+| `logo.svg` | single-line mark, reversed (cream swipe) — see note | header, on the olive bar |
 | `logo-stacked.svg` | two-line mark, reversed | footer |
 | `logo-full.png` | two-line mark on its cream card | structured data (what Google shows as the logo) |
-| `favicon.svg`, `favicon.png` | the navy badge with the roller | browser tab |
+| `favicon.svg`, `favicon.png` | the olive badge with the roller | browser tab |
 | `apple-touch-icon.png`, `icon-192.png` | the same badge | phone home screens |
 | `og-image.png` | the link-preview card | when the link is shared or texted |
+
+**Note on the header mark.** The two-line mark is too small to read at header height, and
+the single-line version in the package hasn't been recoloured yet. So the header uses
+`logo-script-compact-reversed.svg` with the same two colour swaps the designer made to
+the card family (lettering navy → olive, roller → navy). That file is saved as
+`brand/logo-script/logo-script-compact-reversed-olive-DERIVED.svg`. When the designer
+delivers a compact mark in the current colours, copy it over `images/logo.svg`.
 
 The link-preview card was rebuilt from the supplied one's layout with the tagline
 corrected: the supplied card reads "Interior house painting · Barrie & Simcoe County",
@@ -131,12 +139,12 @@ file yourself.)
 Also look at what's *in* the frame before publishing: house numbers, name plaques, mail,
 family photos on the fridge, and anything with a licence plate. Crop or skip those.
 
-The site's colours come from the logo: navy `#143C78` for the header (and a deeper navy
-for the footer), gold `#D9A73A` for the quote buttons, the roller's green `#86A04A` for
-the before/after slider handles, and warm neutrals everywhere else so the photos carry
-the colour. They live in one `:root` block at the top of `index.html`. (The
-`brand-sheet.png` in `brand/` still describes the earlier olive set; the logo files are
-the reference for the current colours.)
+The site's colours come from the logo: olive `#4C5847` for the header and deep olive
+`#2F3730` for the footer, gold `#D9A73A` for the quote buttons, the roller's navy
+`#143C78` for the before/after slider handles, and warm neutrals everywhere else so the
+photos carry the colour. They live in one `:root` block at the top of `index.html`.
+(`brand-sheet.png` in `brand/` matches this except that it names the accent as ochre
+`#C58F2B`; the logo files use gold `#D9A73A`, and so does the site.)
 
 ## 3. Making the form work
 
@@ -275,11 +283,11 @@ For whoever is editing the HTML directly:
 - **Colours.** Every colour is a variable in the `:root` block at the top of `index.html`.
   The grey (`--grey`) is tuned to pass WCAG AA contrast on both the off-white and the
   limestone backgrounds; if you lighten it, small caption text stops passing. Gold
-  (`--accent`) and green (`--green`) both fail contrast with white text, so anything on
-  them uses ink text — don't put white text on gold or green.
+  (`--accent`) fails contrast with white text, so anything on it uses ink text — don't
+  put white text on gold. Navy (`--roller`) is fine with white.
 - **Logo edits.** Change the files in `brand/` (the source), then copy the variant you need
-  over the matching file in `images/`. The header uses the reversed single-line mark
-  because the bar is navy; on a light background use `logo-script-compact.svg` instead.
+  over the matching file in `images/`. The header uses a reversed (cream-swipe) mark
+  because the bar is olive; on a light background use a non-reversed variant.
 - **Adding a new image slot.** If `index.html` gains a new `<img src="images/...">`, add a
   matching `!images/name.jpg` line to `.gitignore` or git will refuse to see the file.
   `work-05.jpg`, `work-05-before.jpg` and so on are already allowed.
