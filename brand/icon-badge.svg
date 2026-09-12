@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="On the Roll Painters mark">
-  <title>On the Roll Painters mark</title>
-  <rect width="512" height="512" rx="113" fill="#4C5847"/>
-  <path d="M127 220 L341 220 L341 292 L91 292 Z" fill="#FFFFFF"/>
-  <path d="M381 181 L381 129 L303 129" fill="none" stroke="#C58F2B" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="227" y="107" width="84" height="44" rx="22" fill="#C58F2B"/>
-  <rect x="341" y="181" width="80" height="150" rx="40" fill="#C58F2B"/>
-</svg>

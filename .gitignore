@@ -16,7 +16,7 @@ images/*
 !images/.gitkeep
 # brand assets (from the logo package)
 !images/logo.svg
-!images/logo-full.svg
+!images/logo-full.png
 !images/logo-stacked.svg
 !images/favicon.svg
 !images/favicon.png

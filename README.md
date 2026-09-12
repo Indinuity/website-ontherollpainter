@@ -8,7 +8,7 @@ index.html          the whole site
 404.html            what a visitor sees if they follow a bad link
 CNAME               tells GitHub which domain to serve
 images/             logo files and web-ready photos (see section 2)
-brand/              the full logo package and brand sheet — source files, not used by the page
+brand/              the full logo package — source files, not used by the page directly
 tools/prep-photo.py makes a web-ready copy of a photo: resized, and location data removed
 site.webmanifest    name and icon for "add to home screen" on phones
 robots.txt          tells search engines they may index the site
@@ -54,23 +54,25 @@ phone are the header, the quote section lead, the footer contact list, and the
 
 ## 2. Logo and photos
 
-**Brand files in place**, from the logo package. The full package (every lockup, colour
-variant and size, plus the brand sheet) is kept in `brand/` so it can't get lost; the page
-only uses the copies in `images/`:
+**Brand files in place.** The logo is the paint-swipe script mark from the business card
+— navy swipe, gold lettering, green roller. The full package is kept in `brand/` so it
+can't get lost: `brand/logo-card/` (the two-line mark), `brand/logo-script/` (the
+single-line version) and `brand/logo/` (an earlier olive block-capitals set, not used).
+The page only uses the copies in `images/`:
 
 | File | What it is | Where it shows |
 |---|---|---|
-| `logo.svg` | horizontal lockup, reversed | header, on the olive bar |
-| `logo-stacked.svg` | stacked lockup, reversed | footer |
-| `logo-full.svg` | primary stacked lockup | structured data (what Google shows as the logo) |
-| `favicon.svg`, `favicon.png` | the badge icon | browser tab |
-| `apple-touch-icon.png`, `icon-192.png` | the badge icon | phone home screens |
+| `logo.svg` | single-line script mark, reversed (cream swipe) | header, on the navy bar |
+| `logo-stacked.svg` | two-line mark, reversed | footer |
+| `logo-full.png` | two-line mark on its cream card | structured data (what Google shows as the logo) |
+| `favicon.svg`, `favicon.png` | the navy badge with the roller | browser tab |
+| `apple-touch-icon.png`, `icon-192.png` | the same badge | phone home screens |
 | `og-image.png` | the link-preview card | when the link is shared or texted |
 
-The link-preview card was rebuilt from the package's own layout with the tagline
-corrected: the supplied one read "Interior house painting · Barrie & Simcoe County",
-which no longer matches the services. The original is at `brand/og-image.png` if you'd
-rather use it.
+The link-preview card was rebuilt from the supplied one's layout with the tagline
+corrected: the supplied card reads "Interior house painting · Barrie & Simcoe County",
+which doesn't match the services any more. The supplied version is kept at
+`brand/og-image-supplied.png` if you'd rather use it.
 
 **Photos in place**, made from the photos you sent (web-sized, location data removed):
 
@@ -129,9 +131,12 @@ file yourself.)
 Also look at what's *in* the frame before publishing: house numbers, name plaques, mail,
 family photos on the fridge, and anything with a licence plate. Crop or skip those.
 
-The site's colours are the brand sheet's: Olive for the header, Deep Olive for the
-footer, Ink for text, and Ochre for the quote buttons and small touches. They live in one
-`:root` block at the top of `index.html`.
+The site's colours come from the logo: navy `#143C78` for the header (and a deeper navy
+for the footer), gold `#D9A73A` for the quote buttons, the roller's green `#86A04A` for
+the before/after slider handles, and warm neutrals everywhere else so the photos carry
+the colour. They live in one `:root` block at the top of `index.html`. (The
+`brand-sheet.png` in `brand/` still describes the earlier olive set; the logo files are
+the reference for the current colours.)
 
 ## 3. Making the form work
 
@@ -269,12 +274,12 @@ For whoever is editing the HTML directly:
   of anchors.
 - **Colours.** Every colour is a variable in the `:root` block at the top of `index.html`.
   The grey (`--grey`) is tuned to pass WCAG AA contrast on both the off-white and the
-  limestone backgrounds; if you lighten it, small caption text stops passing. Ochre
-  (`--accent`) fails contrast with white text, so buttons on it always use ink text —
-  don't put white text on ochre.
+  limestone backgrounds; if you lighten it, small caption text stops passing. Gold
+  (`--accent`) and green (`--green`) both fail contrast with white text, so anything on
+  them uses ink text — don't put white text on gold or green.
 - **Logo edits.** Change the files in `brand/` (the source), then copy the variant you need
-  over the matching file in `images/`. The header uses the reversed horizontal lockup
-  because the bar is olive; on a light background use `logo-horizontal.svg` instead.
+  over the matching file in `images/`. The header uses the reversed single-line mark
+  because the bar is navy; on a light background use `logo-script-compact.svg` instead.
 - **Adding a new image slot.** If `index.html` gains a new `<img src="images/...">`, add a
   matching `!images/name.jpg` line to `.gitignore` or git will refuse to see the file.
   `work-05.jpg`, `work-05-before.jpg` and so on are already allowed.
