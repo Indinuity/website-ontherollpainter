@@ -54,28 +54,30 @@ phone are the header, the quote section lead, the footer contact list, and the
 
 ## 2. Logo and photos
 
-**Brand files in place.** The logo is the paint-swipe script mark from the business card
-in its current colours — olive swipe, gold lettering, navy roller. The full package is
-kept in `brand/` so it can't get lost: `brand/logo-card/` (the two-line mark, current
-colours), `brand/logo-script/` (the single-line version — still in the older navy/lime
-colours) and `brand/logo/` (an earlier block-capitals set). The page only uses the
-copies in `images/`:
+**Brand files in place.** The logo is the paint-swipe script mark from the business card:
+**navy paint strip, gold lettering, olive roller**, sitting directly on whatever is behind
+it — no white or cream card. `brand/brand-sheet.png` shows the system; `brand/` also
+keeps the whole package: `brand/logo-card/` (the two-line mark — `alt-navy-sweep.svg` is
+the one in use; the others are earlier explorations), `brand/logo-script/` (single-line)
+and `brand/logo/` (an earlier block-capitals set). The page only uses the copies in
+`images/`:
 
 | File | What it is | Where it shows |
 |---|---|---|
-| `logo.svg` | single-line mark, reversed (cream swipe) — see note | header, on the olive bar |
-| `logo-stacked.svg` | two-line mark, reversed | footer |
-| `logo-full.png` | two-line mark on its cream card | structured data (what Google shows as the logo) |
+| `logo.svg` | single-line mark — see note | header, on the olive bar |
+| `logo-stacked.svg` | two-line mark (`alt-navy-sweep.svg`) | footer |
+| `logo-full.png` | two-line mark on a cream background | structured data (what Google shows as the logo) |
 | `favicon.svg`, `favicon.png` | the olive badge with the roller | browser tab |
 | `apple-touch-icon.png`, `icon-192.png` | the same badge | phone home screens |
 | `og-image.png` | the link-preview card | when the link is shared or texted |
 
 **Note on the header mark.** The two-line mark is too small to read at header height, and
-the single-line version in the package hasn't been recoloured yet. So the header uses
-`logo-script-compact-reversed.svg` with the same two colour swaps the designer made to
-the card family (lettering navy → olive, roller → navy). That file is saved as
-`brand/logo-script/logo-script-compact-reversed-olive-DERIVED.svg`. When the designer
-delivers a compact mark in the current colours, copy it over `images/logo.svg`.
+the single-line file in the package still has a lime roller. So the header uses
+`logo-script-compact.svg` with one change: the roller is the light olive `#75866A` from
+the designer's own `alt-navy-sweep.svg`, because an olive roller vanishes on the olive
+bar. That file is saved as `brand/logo-script/logo-script-compact-navy-DERIVED.svg`. When
+the designer delivers a single-line mark in the final colours, copy it over
+`images/logo.svg`.
 
 The link-preview card was rebuilt from the supplied one's layout with the tagline
 corrected: the supplied card reads "Interior house painting · Barrie & Simcoe County",
@@ -140,11 +142,11 @@ Also look at what's *in* the frame before publishing: house numbers, name plaque
 family photos on the fridge, and anything with a licence plate. Crop or skip those.
 
 The site's colours come from the logo: olive `#4C5847` for the header and deep olive
-`#2F3730` for the footer, gold `#D9A73A` for the quote buttons, the roller's navy
+`#2F3730` for the footer, gold `#D9A73A` for the quote buttons, the strip's navy
 `#143C78` for the before/after slider handles, and warm neutrals everywhere else so the
-photos carry the colour. They live in one `:root` block at the top of `index.html`.
-(`brand-sheet.png` in `brand/` matches this except that it names the accent as ochre
-`#C58F2B`; the logo files use gold `#D9A73A`, and so does the site.)
+photos carry the colour. They live in one `:root` block at the top of `index.html` and
+on `brand/brand-sheet.png` (regenerated 2026-09-12; `brand/brand-sheet.html` is its
+source, so it can be re-rendered if the marks change again).
 
 ## 3. Making the form work
 

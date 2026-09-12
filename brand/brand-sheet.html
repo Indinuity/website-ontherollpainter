@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0}
+body{width:1700px;min-height:1450px;background:#FCFBF8;font-family:"Jost",system-ui,sans-serif;color:#443D35;padding:70px 90px;box-sizing:border-box;position:relative}
+h1{margin:0;font-weight:600;font-size:44px;letter-spacing:.01em;color:#4C5847;text-transform:uppercase}
+.sub{margin:10px 0 0;font-weight:500;font-size:17px;letter-spacing:.2em;text-transform:uppercase;color:#756B5E}
+hr{border:0;border-top:1px solid #DCD5C9;margin:26px 0 44px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:60px 80px}
+.tile{display:flex;align-items:center;justify-content:center;border-radius:14px;padding:40px}
+.tile img{width:100%;height:auto;display:block}
+.tile.olive{background:#4C5847}
+.tile.deep{background:#2F3730}
+.tile.paper{background:#F6F1E6}
+.lbl{margin:18px 0 0;font-weight:500;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:#756B5E}
+.lbl small{display:block;letter-spacing:.05em;text-transform:none;font-weight:400;color:#8a8076;margin-top:6px;font-size:13px}
+.icons{display:flex;align-items:flex-end;gap:36px}
+.icons img{display:block;border-radius:22%}
+.swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:40px;margin-top:8px}
+.sw{height:130px;border-radius:12px;border:1px solid rgba(0,0,0,.06)}
+.sw-name{font-weight:600;font-size:22px;margin:18px 0 6px;color:#241F1A}
+.sw-hex{font-weight:500;font-size:14px;letter-spacing:.18em;color:#756B5E}
+.sw-use{font-size:13px;color:#756B5E;margin-top:8px;line-height:1.5}
+.note{margin-top:56px;font-size:14px;color:#756B5E;line-height:1.6;border-top:1px solid #DCD5C9;padding-top:22px}
+</style></head><body>
+<h1>Brand marks</h1>
+<p class="sub">On the Roll Painters · Logo system · Outlined vector</p>
+<hr>
+<div class="grid">
+  <div><div class="tile paper"><img src="logo-card/alt-navy-sweep.svg" style="width:86%"></div><p class="lbl">Primary mark<small>logo-card/alt-navy-sweep.svg — navy strip, gold lettering, olive roller</small></p></div>
+  <div><div class="tile deep"><img src="logo-card/alt-navy-sweep.svg" style="width:86%"></div><p class="lbl">On dark backgrounds<small>The same file — footer, link-preview card. No card or tile behind it.</small></p></div>
+  <div><div class="tile olive" style="padding:56px 40px"><img src="logo-script/logo-script-compact-navy-DERIVED.svg" style="width:96%"></div><p class="lbl">Single-line mark<small>Header. Derived from logo-script-compact.svg: roller lime → light olive #75866A so it shows on the olive bar. Replace when a designed version exists.</small></p></div>
+  <div><div class="icons" style="padding:26px 0 0"><img src="logo-card/icon-badge-512.png" width="230" height="230"><img src="logo-card/icon-badge-192.png" width="96" height="96"><img src="logo-card/icon-badge-192.png" width="52" height="52"></div><p class="lbl" style="margin-top:34px">App icon and favicon, 512 / 96 / 52 px<small>logo-card/icon-badge.svg and the PNG sizes beside it</small></p></div>
+</div>
+<hr style="margin-top:56px">
+<p class="sub" style="margin:0 0 26px">Colour</p>
+<div class="swatches">
+  <div><div class="sw" style="background:#143C78"></div><div class="sw-name">Navy</div><div class="sw-hex">#143C78</div><div class="sw-use">The paint strip. Slider handles.</div></div>
+  <div><div class="sw" style="background:#D9A73A"></div><div class="sw-name">Gold</div><div class="sw-hex">#D9A73A</div><div class="sw-use">The lettering. Buttons — always with Ink text.</div></div>
+  <div><div class="sw" style="background:#4C5847"></div><div class="sw-name">Olive</div><div class="sw-hex">#4C5847</div><div class="sw-use">The roller. The header bar, tiles.</div></div>
+  <div><div class="sw" style="background:#2F3730"></div><div class="sw-name">Deep Olive</div><div class="sw-hex">#2F3730</div><div class="sw-use">Footer and dark tiles.</div></div>
+  <div><div class="sw" style="background:#241F1A"></div><div class="sw-name">Ink</div><div class="sw-hex">#241F1A</div><div class="sw-use">Body text on light backgrounds.</div></div>
+  <div><div class="sw" style="background:#F6F1E6"></div><div class="sw-name">Cream</div><div class="sw-hex">#F6F1E6</div><div class="sw-use">The roller frame. Light backgrounds.</div></div>
+</div>
+<p class="note">Clear space: keep the height of the roller free on all sides. Minimum width 160px for the two-line mark, 120px for the single-line mark, 46px for the icon. The mark sits directly on the background — no white or cream card behind it. In-logo tints (roller highlight #75866A) are part of the artwork, not for UI. Gold with white text fails contrast; use Ink on Gold. Other variants in brand/logo-card (reversed, on-olive, plain, mono) are earlier explorations. Generated 2026-09-12 from the files in brand/ and the site's colour variables; supersedes the 2026-09-11 sheet.</p>
+</body></html>
