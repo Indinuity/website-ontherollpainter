@@ -35,7 +35,7 @@ marked. The short list:
 | Services | the seven items in "What gets done" | paint and stain only — no tiling, by request |
 | Stats bar | three panels under the hero | add insurance once you have it |
 | About | four paragraphs | names Lexis Carter; read them and make sure they're true |
-| Trade rate | "For painting companies" section | from $250 a day plus travel; define the hours and what's included |
+| Trade rate | "For painting companies" section | from $250 a day, plus travel and materials; the detail goes in each job's written terms |
 | Reviews | commented out until you have real ones | see the block above the quote section |
 | Formspree ID | the `<form action="...">` | YOUR_FORM_ID |
 | Structured data | the `application/ld+json` block in the `<head>` | add logo and image URLs once the files exist |
@@ -272,13 +272,38 @@ Things to verify before this goes live:
   panel ready, and the footer line has a note showing where "Fully insured" goes.
 - **The warranty line in the About section.** It's a promise to come back and fix your
   own failures. Only leave it in if you mean it.
-- **WSIB, before taking contract work.** Painting your own customers' homes is exempt from
-  WSIB (the "home renovation" exemption: work done directly for the person who lives
-  there). Working *for another painting company* is not exempt — an independent operator
-  in construction needs WSIB coverage, and the company hiring you will ask for a WSIB
-  clearance certificate before you start. Register at wsib.ca before the first contract
-  day; premiums are a percentage of what you bill. Liability insurance will be asked for
-  too.
+- **Before the first day of contract work for another company.** Five things, none of
+  them big, that keep a one-person painter from being the one left holding the bill:
+  1. **WSIB.** Painting your own customers' homes is exempt (work done directly for the
+     person who lives there). Working *for another painting company* is not — register as
+     an independent operator at wsib.ca, and expect to be asked for a clearance
+     certificate before you start. Premiums are a percentage of what you bill.
+  2. **Liability insurance.** The company will ask for a certificate (usually $1M–$2M).
+     A few hundred dollars a year for a sole operator, and it covers your own customers'
+     jobs too.
+  3. **Terms in writing, every job.** An email is enough. Say: the day rate and what a
+     day is (hours); half-day and overtime; travel (per km or a flat amount for the job);
+     who supplies paint and primer, and that anything you buy is billed at cost with
+     receipts; that you bring your own brushes, rollers, drops and hand tools and they
+     supply ladders, scaffold and sprayers; when you invoice (weekly on longer jobs) and
+     when it's paid (net 7 or 14); what happens on a rain day for deck work; and that
+     the warranty to the homeowner is theirs — you stand behind your workmanship to
+     them, not to their customer.
+  4. **Invoices.** Business name, dates, hours, rate, travel, materials with receipts,
+     total. Number them and keep copies. Register the business name (Ontario Business
+     Registry, about $60 for five years) so you can bank and invoice as On The Roll
+     Painters. Register for HST once you pass $30,000 in a year — companies expect an HST
+     number on invoices, and registering early lets you claim the HST back on paint,
+     gas and tools.
+  5. **Working at Heights.** Ontario requires the one-day certificate for anyone using
+     fall protection on a construction site. Not every job needs it, but companies doing
+     stairwells, exteriors or scaffold work will ask; it's about $150 and lasts three
+     years. Worth having before someone asks.
+
+  One more: keep more than one company on the go and invoice under your own name with
+  your own tools. Full-time weeks for a single company, on their schedule, with their
+  gear, starts to look like employment to the CRA and WSIB — and then it's their problem
+  and yours.
 - **The project captions.** They describe only what's visible in each photo. Read them
   against your memory of the job and correct anything that's off. Wallpaper removal was
   dropped from the services list because it isn't on your card — say so if you do it.
