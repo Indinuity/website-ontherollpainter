@@ -55,13 +55,13 @@ phone are the header, the quote section lead, the footer contact list, and the
 ## 2. Logo and photos
 
 **Brand files in place.** The logo is the paint-swipe script mark from the business card,
-coloured for the site's olive backgrounds: **navy paint strip, gold lettering, cream
-roller**, sitting directly on the olive with no card behind it. (The business card has an
+coloured for the site's olive backgrounds: **navy paint strip, gold lettering, sage-lime
+roller** (`#A7BE6E`, with a cream handle), sitting directly on the olive with no card behind it. (The business card has an
 olive roller instead, which works on white but vanishes on the site's olive.) `brand/brand-sheet.png` shows
 the system; `brand/brand-sheet.html` is its source. `brand/` also keeps the whole package
 from the designer — `brand/logo-card/`, `brand/logo-script/`, `brand/logo/` — of which
 the files actually in use are the two marked `-site-DERIVED`: the designer's reversed
-files with the strip recoloured navy, the roller cream and the lettering gold. Everything
+files with the strip recoloured navy, the roller sage-lime and the lettering gold. Everything
 else in those folders is an earlier exploration. The page
 only uses the copies in `images/`:
 
@@ -70,7 +70,7 @@ only uses the copies in `images/`:
 | `logo.svg` | single-line mark (`logo-script-compact-site-DERIVED.svg`) | header, on the olive bar |
 | `logo-stacked.svg` | two-line mark (`logo-card-site-DERIVED.svg`) | footer |
 | `logo-full.png` | the two-line mark on olive | structured data (what Google shows as the logo) |
-| `favicon.svg`, `favicon.png` | the olive badge — navy swipe, cream roller | browser tab |
+| `favicon.svg`, `favicon.png` | the olive badge — navy swipe, sage-lime roller | browser tab |
 | `apple-touch-icon.png`, `icon-192.png` | the same badge | phone home screens |
 | `og-image.png` | the link-preview card | when the link is shared or texted |
 
