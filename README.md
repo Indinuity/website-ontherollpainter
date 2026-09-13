@@ -1,13 +1,16 @@
 # ontherollpainter.ca
 
-A single-page static site. No build step — the whole site is one HTML file, so you can
-edit it in GitHub's web editor and the change is live in about a minute.
+A static site with no build step: two HTML pages that share one stylesheet and one
+script. Edit them in GitHub's web editor and the change is live in about a minute.
 
 ```
-index.html          the whole site
+index.html          the home page
+gallery.html        every project, house by house, with before-and-after where there is one
+styles.css          all the styling for both pages (colours are in the :root block at the top)
+site.js             the menu, the photo lightbox, the before/after sliders and the quote form
 404.html            what a visitor sees if they follow a bad link
 CNAME               tells GitHub which domain to serve
-images/             logo files and web-ready photos (see section 2)
+images/             logo files and web-ready photos (see section 2); images/gallery/ holds the gallery page's
 brand/              the full logo package — source files, not used by the page directly
 tools/prep-photo.py makes a web-ready copy of a photo: resized, and location data removed
 site.webmanifest    name and icon for "add to home screen" on phones
@@ -29,7 +32,7 @@ marked. The short list:
 |---|---|---|
 | Project captions | four items in "Previous work" (two are before/after sliders) | describe what's visible in each photo; add what only you know |
 | Before & after | the paragraph and caption under the Swan kitchen photos | same — confirm it matches how the job went |
-| Services | the eight items in "What gets done" | matched to your business card; edit if that changes |
+| Services | the seven items in "What gets done" | paint and stain only — no tiling, by request |
 | Stats bar | three panels under the hero | add insurance once you have it |
 | About | four paragraphs | names Lexis Carter; read them and make sure they're true |
 | Reviews | commented out until you have real ones | see the block above the quote section |
@@ -39,8 +42,8 @@ marked. The short list:
 Already filled in, as requested:
 
 - Business name: **On The Roll Painters** (the domain stays ontherollpainter.ca)
-- Services: the list from the business card — rooms, kitchen cabinets, deck staining, stairs
-  and railings, closets, furniture, drywall and mudding, backsplash installation
+- Services: rooms, kitchen cabinets, deck staining, stairs and railings, closets, furniture,
+  drywall and mudding. Backsplash/tiling was dropped — paint and stain only.
 - Tagline: **Affordable Professional Quality Painting** (header, hero, footer, social previews)
 - Service area: **Barrie, Innisfil, Orillia, Springwater** (hero, quote section, footer, page title, structured data)
 - Email: **ontherollpainter@gmail.com** (quote section and footer)
@@ -95,6 +98,13 @@ which doesn't match the services any more. The supplied version is kept at
 | `before.jpg` | Barbs kitchen (2) | Before & after |
 | `after.jpg` | Barbs kitchen after (5) | Before & after |
 | `about.jpg` | IMG_6826 (two-tone deck) | About section |
+| `gallery/*.jpg` (21 files) | the rest of the usable photos, at 1200px | the gallery page, by project |
+
+**The gallery page** (`gallery.html`) shows nine projects, each with a title, one line of
+what's visible, and its photos: two before/after sliders (Swan kitchen, deck steps), two
+side-by-side pairs (Barbs kitchen, and the front door with the house number cropped out),
+and grids of finished work for the rest. To add a project, copy a `<section class="project">`
+block; to add a photo, make it with the prep script using a `gallery/<project>-<n>` slot.
 
 The two sliders reveal the "after" as you drag, hover, or press the arrow keys. A slider
 only works when both photos are of the same thing from roughly the same spot — the deck
@@ -129,7 +139,10 @@ python3 tools/prep-photo.py "path/to/original.jpg" work-01
 
 That writes `images/work-01.jpg` at web size with all metadata stripped. Use `hero`,
 `about`, `work-01` … `work-04`, `before` or `after` as the second word; for
-a slider, `work-03-before` and `work-03-after`. The `work-` slots are portrait pairs; a
+a slider, `work-03-before` and `work-03-after`; for the gallery page,
+`gallery/<project>-<n>` (e.g. `gallery/closets-4`). An optional third argument crops
+before resizing — `0,0,0.78,1` keeps the left 78% — for taking a house number or a face
+out of frame. The `work-` slots are portrait pairs; a
 landscape photo dropped into one is shown centre-cropped on the page and in full when
 clicked.
 (Needs Python with Pillow: `python3 -m pip install pillow`. squoosh.app in the browser
@@ -142,7 +155,7 @@ family photos on the fridge, and anything with a licence plate. Crop or skip tho
 The site's colours are earth tones: olive `#4C5847` for the header and deep olive
 `#2F3730` for the footer, gold `#D9A73A` for the quote buttons, the strip's navy
 `#143C78` for the before/after slider handles, and warm neutrals everywhere else so the
-photos carry the colour. They live in one `:root` block at the top of `index.html` and on
+photos carry the colour. They live in one `:root` block at the top of `styles.css` and on
 `brand/brand-sheet.png` (`brand/brand-sheet.html` is its source; re-render it if the marks
 change again).
 
@@ -273,14 +286,17 @@ Things to verify before this goes live:
 For whoever is editing the HTML directly:
 
 - **Check the markup** after any structural edit:
-  `npx html-validate index.html 404.html` — should print nothing. The one rule that is
+  `npx html-validate index.html gallery.html 404.html` — should print nothing. The one rule that is
   switched off (`tel-non-breaking`) doesn't apply since there is no phone number.
 - **Sitemap.** `sitemap.xml` has a `<lastmod>` date. Bump it when the page content changes
   meaningfully; it's a hint to search engines, not a requirement.
-- **Adding pages.** If the site ever grows past one page, each new page needs a `<url>`
-  entry in `sitemap.xml`, and the header nav in `index.html` will need real links instead
-  of anchors.
-- **Colours.** Every colour is a variable in the `:root` block at the top of `index.html`.
+- **Adding pages.** Each new page needs a `<url>` entry in `sitemap.xml` and a link in
+  both headers.
+- **Two pages, one header and footer.** The header, footer and `<head>` links are repeated
+  in `index.html` and `gallery.html` (no build step means no includes). Change both.
+- **The hero panel.** The headline sits on a frosted panel (`.hero-panel` in `styles.css`)
+  that blurs the photo behind it; the photo itself and the text colour are untouched.
+- **Colours.** Every colour is a variable in the `:root` block at the top of `styles.css`.
   The grey (`--grey`) is tuned to pass WCAG AA contrast on both the off-white and the
   limestone backgrounds; if you lighten it, small caption text stops passing. Gold
   (`--accent`) fails contrast with white text, so anything on it uses ink text — don't

@@ -48,312 +48,17 @@
   "url": "https://ontherollpainter.ca/",
   "email": "ontherollpainter@gmail.com",
   "slogan": "Affordable Professional Quality Painting",
-  "description": "Affordable professional quality painting: rooms, kitchen cabinets, stairs and railings, closets, furniture, drywall repair, backsplashes and deck staining. Serving Barrie, Innisfil, Orillia and Springwater. One painter, start to finish. Written quotes before any work starts.",
+  "description": "Affordable professional quality painting: rooms, kitchen cabinets, stairs and railings, closets, furniture, drywall repair and deck staining. Paint only, no tiling. Serving Barrie, Innisfil, Orillia and Springwater. One painter, start to finish. Written quotes before any work starts.",
   "image": "https://ontherollpainter.ca/images/hero.jpg",
   "logo": "https://ontherollpainter.ca/images/logo-full.png",
   "founder": {"@type": "Person", "name": "Lexis Carter"},
   "areaServed": ["Barrie", "Innisfil", "Orillia", "Springwater"],
   "priceRange": "$",
-  "knowsAbout": ["Interior painting", "Kitchen cabinet painting", "Deck staining", "Stair and railing painting", "Closet painting", "Furniture refinishing", "Drywall repair", "Backsplash installation"]
+  "knowsAbout": ["Interior painting", "Kitchen cabinet painting", "Deck staining", "Stair and railing painting", "Closet painting", "Furniture refinishing", "Drywall repair"]
 }
 </script>
 
-<style>
-/* ============================================================
-   PALETTE — earth tones, with the mark drawn for them
-   Olive #4C5847 header, Deep Olive #2F3730 footer. The logo sits on
-   those with a Navy #143C78 strip, Gold #D9A73A lettering and a
-   sage-lime #A7BE6E roller. Neutral elsewhere so the photographs carry the
-   colour: gold is reserved for the one thing we want people to do
-   (the quote buttons) and the strip's navy marks the before/after
-   slider handles. Gold fails contrast with white text, so it always
-   carries ink text.
-   ============================================================ */
-:root{
-  --ink:#241F1A;        /* Ink: body text on light backgrounds */
-  --body:#443D35;
-  --grey:#6B6156;       /* warm grey; dark enough to pass AA on both paper and stone */
-  --paper:#FCFBF8;      /* warm off-white */
-  --stone:#EDE8DF;      /* limestone */
-  --hair:#DCD5C9;
-  --brand:#4C5847;      /* Olive: header */
-  --brand-deep:#2F3730; /* Deep Olive: footer */
-  --accent:#D9A73A;     /* Gold: buttons, checked chips, selection */
-  --roller:#143C78;     /* Navy, the paint strip: slider handles */
-
-  --display:"Bodoni Moda",Georgia,serif;
-  --ui:"Jost",system-ui,sans-serif;
-
-  --pad:clamp(1.25rem,6vw,6rem);
-  --maxw:80rem;
-  --narrow:46rem;
-  --bar-h:4.75rem;
-}
-
-*{box-sizing:border-box}
-::selection{background:var(--accent);color:var(--ink)}
-html{scroll-behavior:smooth;scroll-padding-top:var(--bar-h)}
-body{
-  margin:0;background:var(--paper);color:var(--body);
-  font-family:var(--ui);font-weight:300;font-size:1.0625rem;line-height:1.75;
-  -webkit-font-smoothing:antialiased;
-}
-img{max-width:100%;display:block}
-a{color:inherit}
-
-h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--ink);margin:0;line-height:1.04;letter-spacing:-0.005em}
-h1{font-size:clamp(2.75rem,7.5vw,6rem)}
-h2{font-size:clamp(2rem,4.6vw,3.5rem)}
-h3{font-size:1.5rem}
-p{margin:0 0 1.15rem;max-width:60ch}
-
-/* small tracked caps: the caption voice of the genre, used sparingly */
-.caps{
-  font-family:var(--ui);font-weight:400;font-size:.7rem;
-  letter-spacing:.18em;text-transform:uppercase;color:var(--grey);
-}
-
-.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
-.narrow{max-width:var(--narrow)}
-.narrow h2,.qhead h2{margin:.75rem 0 1.25rem}
-section{padding-block:clamp(4.5rem,10vw,9rem)}
-.stone{background:var(--stone)}
-.centered{text-align:center}
-.centered p{margin-inline:auto}
-.rule{height:1px;background:var(--hair);border:0;margin:0}
-.cta-row{margin-top:2.5rem}
-
-:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
-.bar :focus-visible{outline-color:#fff}
-.quote :focus-visible,footer :focus-visible{outline-color:var(--accent)}
-
-/* keyboard users can jump past the header; invisible until focused */
-.skip{
-  position:absolute;left:-999px;top:0;z-index:100;
-  background:var(--ink);color:#fff;padding:.75rem 1.25rem;text-decoration:none;
-  font-family:var(--ui);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-}
-.skip:focus{left:var(--pad);top:var(--pad)}
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-
-/* ---------- header ---------- */
-.bar{position:sticky;top:0;z-index:60;background:var(--brand);color:#fff}
-.bar .wrap{display:flex;align-items:center;gap:1.75rem;min-height:var(--bar-h)}
-.brand{display:flex;align-items:center;gap:1.1rem;text-decoration:none;margin-right:auto;min-width:0}
-.brand img{height:2.75rem;width:auto;display:block}
-.brand .tagline{font-family:var(--ui);font-weight:400;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.78);padding-left:1.1rem;border-left:1px solid rgba(255,255,255,.25);white-space:nowrap}
-@media(max-width:1400px){.brand .tagline{display:none}}
-nav{display:flex;gap:2rem;align-items:center}
-nav a{font-family:var(--ui);font-weight:400;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.85)}
-nav a:hover{color:#fff}
-.mini{display:none;font-family:var(--ui);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;white-space:nowrap;color:#fff}
-.navcta{display:none}
-.menu-btn{display:none;background:none;border:0;color:#fff;font-family:var(--ui);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;padding:.5rem}
-
-/* ---------- buttons ---------- */
-.btn{
-  font-family:var(--ui);font-weight:500;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-  background:var(--accent);color:var(--ink);text-decoration:none;border:1px solid var(--accent);
-  padding:.85rem 1.6rem;border-radius:0;cursor:pointer;display:inline-block;line-height:1;white-space:nowrap;
-  transition:background .2s,color .2s,border-color .2s;
-}
-.btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
-.bar .btn:hover,.hero .btn:hover{background:#fff;color:var(--ink);border-color:#fff}
-.btn-sm{padding:.6rem 1.1rem}
-
-/* ---------- photo placeholders ---------- */
-.shot{position:relative;overflow:hidden;background:var(--stone);margin:0}
-.shot img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
-.shot img.missing{display:none}
-.shot.zoomable{cursor:zoom-in}
-.ph{
-  position:absolute;inset:0;z-index:0;display:grid;place-content:center;gap:.4rem;text-align:center;padding:1.5rem;
-  font-family:var(--ui);font-weight:400;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);
-  background:var(--stone);
-}
-.ph b{font-family:var(--display);font-size:1rem;letter-spacing:0;text-transform:none;font-weight:400;color:var(--body);display:block}
-
-/* ---------- hero ---------- */
-.hero{position:relative;min-height:80vh;min-height:min(84svh,760px);display:grid;align-items:end;color:#fff;overflow:hidden}
-.hero .shot{position:absolute;inset:0;z-index:0}
-.hero .scrim{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(36,31,26,.18) 0%,rgba(36,31,26,.28) 45%,rgba(36,31,26,.78) 100%)}
-.hero-inner{position:relative;z-index:3;padding-block:clamp(3.5rem,9vw,6rem);width:100%}
-.hero h1{color:#fff;max-width:14ch;font-size:clamp(2.3rem,6.8vw,5.25rem)}
-.hero .kicker{color:rgba(255,255,255,.82);margin-bottom:1.4rem}
-.hero .lede{font-size:1.1rem;color:rgba(255,255,255,.92);max-width:40ch;margin:1.5rem 0 2.25rem}
-
-/* ---------- spec bar ---------- */
-.specs{border-bottom:1px solid var(--hair)}
-.specs .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
-.specs div{padding:2rem 1.5rem;text-align:center;border-left:1px solid var(--hair)}
-.specs div:first-child{border-left:0}
-.specs b{font-family:var(--display);font-weight:400;font-size:1.75rem;color:var(--ink);display:block;margin-bottom:.35rem;line-height:1.1}
-
-/* ---------- plates (project photography) ---------- */
-.plate{margin-top:clamp(3rem,7vw,6rem)}
-.plate .shot{aspect-ratio:16/9}
-.plate.tall .shot{aspect-ratio:4/5}
-.cap{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:baseline;padding-top:1.1rem;border-top:1px solid var(--hair);margin-top:1.1rem}
-.cap h3{font-size:1.35rem;margin-bottom:.3rem}
-.cap p{font-size:.95rem;color:var(--grey);margin:0;max-width:52ch}
-.cap .meta{text-align:right;white-space:nowrap}
-.pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem)}
-.pair .shot{aspect-ratio:4/5}
-.pair-label{margin-bottom:1rem}
-
-/* ---------- before/after slider ----------
-   Two photos stacked; the "after" is clipped at --pos. A full-size transparent range
-   input drives it, so it works by drag, touch, and arrow keys. On a mouse, the split
-   also follows the pointer. Without JS it sits at 50/50. */
-.compare{--pos:50%;cursor:ew-resize}
-.compare img{position:absolute;inset:0}
-.compare .after{clip-path:inset(0 0 0 var(--pos))}
-.compare .tag{
-  position:absolute;top:.75rem;z-index:3;pointer-events:none;
-  font-family:var(--ui);font-weight:400;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
-  color:#fff;background:rgba(36,31,26,.65);padding:.35rem .6rem;
-}
-.compare .tag-b{left:.75rem}
-.compare .tag-a{right:.75rem}
-.compare .divider{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;z-index:3;pointer-events:none;box-shadow:0 0 0 1px rgba(36,31,26,.2)}
-.compare .divider::after{
-  content:"\2039\2009\203A";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:2.5rem;height:2.5rem;border-radius:50%;background:var(--roller);color:#fff;
-  font-family:var(--ui);font-size:1.1rem;line-height:2.5rem;text-align:center;box-shadow:0 1px 6px rgba(36,31,26,.3);
-}
-.compare input{position:absolute;inset:0;z-index:4;width:100%;height:100%;margin:0;padding:0;opacity:0;cursor:ew-resize;touch-action:pan-y;-webkit-appearance:none;appearance:none}
-.compare:has(input:focus-visible){outline:2px solid var(--ink);outline-offset:4px}
-.ba-pair{margin-top:clamp(2.5rem,6vw,4rem)}
-.ba-cap{margin-top:1.5rem}
-
-/* ---------- services ---------- */
-.list{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(2rem,6vw,5rem);margin-top:3rem}
-.item{padding:1.75rem 0;border-top:1px solid var(--hair)}
-.item h3{font-size:1.3rem;margin-bottom:.45rem}
-.item p{font-size:.98rem;color:var(--grey);margin:0}
-
-/* ---------- process ---------- */
-.steps{counter-reset:s;display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(1.5rem,3vw,2.5rem);margin-top:3.5rem}
-.step{border-top:1px solid var(--ink);padding-top:1.1rem}
-.step::before{
-  counter-increment:s;content:counter(s,decimal-leading-zero);
-  font-family:var(--display);font-size:.85rem;color:var(--grey);display:block;margin-bottom:.75rem;
-}
-.step h3{font-size:1.1rem;margin-bottom:.4rem}
-.step p{font-size:.92rem;color:var(--grey);margin:0}
-
-/* ---------- reviews ---------- */
-.pull{max-width:34ch;margin:2.5rem auto 0;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.5rem,3.2vw,2.35rem);line-height:1.3;color:var(--ink)}
-.attrib{margin-top:1.75rem}
-.small-reviews{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);margin-top:clamp(3.5rem,7vw,5.5rem);padding-top:2.5rem;border-top:1px solid var(--hair);text-align:left}
-.small-reviews p{font-family:var(--display);font-style:italic;font-size:1.1rem;line-height:1.5;color:var(--ink)}
-
-/* ---------- about ---------- */
-.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,6vw,5rem);align-items:center}
-.about-grid .shot{aspect-ratio:4/5}
-.about-grid h2{margin:.75rem 0 1.5rem}
-.signoff{font-family:var(--display);font-size:1.35rem;color:var(--ink);margin-top:2rem}
-.about-grid .cta-row{margin-top:1.5rem}
-
-/* ---------- quote ---------- */
-.quote{background:var(--ink);color:#fff}
-.quote h2{color:#fff}
-.quote .lead{color:rgba(255,255,255,.75);max-width:44ch;margin-inline:auto}
-.quote .lead a{color:#fff}
-.quote .wrap{display:grid;grid-template-columns:1fr;gap:0}
-.qhead{text-align:center;margin-bottom:clamp(2.5rem,5vw,4rem)}
-.qhead .caps{color:rgba(255,255,255,.55)}
-form{max-width:44rem;margin-inline:auto;display:grid;gap:1.75rem;width:100%}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem}
-label{font-family:var(--ui);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);display:block;margin-bottom:.6rem}
-input[type=text],input[type=email],input[type=tel],select,textarea{
-  width:100%;font-family:var(--ui);font-weight:300;font-size:1rem;padding:.65rem 0;
-  border:0;border-bottom:1px solid rgba(255,255,255,.45);border-radius:0;
-  background:transparent;color:#fff;
-}
-select option{color:var(--ink)}
-input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:#fff}
-textarea{min-height:5rem;resize:vertical}
-fieldset{border:0;padding:0;margin:0}
-legend{font-family:var(--ui);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.9rem;padding:0}
-.checks{display:flex;flex-wrap:wrap;gap:.6rem}
-.checks label{
-  margin:0;font-size:.72rem;letter-spacing:.12em;color:rgba(255,255,255,.85);
-  border:1px solid rgba(255,255,255,.45);padding:.6rem 1rem;cursor:pointer;
-  display:flex;align-items:center;gap:.5rem;
-}
-.checks input{accent-color:var(--accent);margin:0}
-.checks label:has(input:checked){background:var(--accent);color:var(--ink);border-color:var(--accent)}
-.honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.quote .btn{justify-self:center;padding-inline:3rem}
-.quote .btn:hover{background:#fff;color:var(--ink);border-color:#fff}
-.quote .btn:disabled{opacity:.6;cursor:wait}
-.fine{font-size:.8rem;color:rgba(255,255,255,.5);text-align:center;margin:0;max-width:46ch;margin-inline:auto}
-.formnote{font-family:var(--ui);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:1rem;border:1px solid rgba(255,255,255,.4);display:none}
-.formnote.show{display:block}
-form.sent > :not(.formnote){display:none}
-
-/* ---------- footer ---------- */
-footer{background:var(--brand-deep);color:#fff;padding-block:clamp(3.5rem,6vw,5rem) 2.5rem}
-.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem}
-footer h4{font-family:var(--ui);font-weight:400;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0 0 1.1rem}
-footer a{color:#fff;text-decoration:none}
-footer a:hover{text-decoration:underline;text-underline-offset:3px}
-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem;font-size:.95rem}
-.foot .mark{width:14rem;max-width:100%;height:auto;display:block;margin:0 0 1.25rem -1.25rem}
-.foot .blurb{color:rgba(255,255,255,.6);font-size:.95rem;max-width:32ch}
-.legal{border-top:1px solid rgba(255,255,255,.15);margin-top:3rem;padding-top:1.5rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-
-/* ---------- lightbox ---------- */
-dialog{border:0;padding:0;background:transparent;max-width:92vw;max-height:92vh}
-dialog::backdrop{background:rgba(0,0,0,.94)}
-dialog img{max-height:88vh;width:auto}
-dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff;font-family:var(--ui);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.6rem 1rem;cursor:pointer}
-
-/* ---------- responsive ---------- */
-@media(max-width:900px){
-  :root{--bar-h:4.25rem}
-  .list,.pair,.small-reviews{grid-template-columns:1fr}
-  .specs .wrap{grid-template-columns:1fr 1fr}
-  .specs div:nth-child(3){border-left:0}
-  .specs div:nth-child(-n+2){border-bottom:1px solid var(--hair)}
-  .steps{grid-template-columns:1fr 1fr}
-  .foot{grid-template-columns:1fr 1fr}
-  .cap{grid-template-columns:1fr}
-  .cap .meta{text-align:left}
-  .bar .wrap{gap:.9rem}
-  .brand img{height:2.2rem}
-  nav{display:none}
-  nav.open{
-    display:flex;position:absolute;top:100%;left:0;right:0;background:var(--brand);
-    flex-direction:column;align-items:flex-start;gap:0;padding:.25rem var(--pad) 1.25rem;
-    border-top:1px solid rgba(255,255,255,.15);
-  }
-  nav.open a{padding:.9rem 0;width:100%;border-bottom:1px solid rgba(255,255,255,.12)}
-  nav.open .navcta{display:block;border-bottom:0;color:#fff;margin-top:.5rem}
-  .menu-btn{display:block;order:3}
-  .bar .btn{display:none}
-  .mini{display:inline}
-  .item{padding:1.4rem 0}
-}
-@media(max-width:560px){
-  .hero{min-height:74vh;min-height:min(78svh,680px)}
-  .steps{grid-template-columns:1fr}
-  .row{grid-template-columns:1fr}
-  .foot,.specs .wrap{grid-template-columns:1fr}
-  .specs div{border-left:0;border-bottom:1px solid var(--hair);padding:1.5rem}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *{animation:none!important;transition:none!important}
-}
-@media print{
-  .bar,.skip,.menu-btn,.scrim,.hero .shot,.quote form,dialog{display:none!important}
-  .hero{min-height:0;color:var(--ink)}
-  .hero h1,.hero .lede,.hero .kicker{color:var(--ink)}
-  section{padding-block:1.5rem}
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -363,11 +68,11 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
   <div class="wrap">
     <a class="brand" href="#top">
       <img src="images/logo.svg" alt="On The Roll Painters" width="1497" height="261">
-      <span class="tagline">Affordable professional quality painting</span>
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main">
       <a href="#work">Work</a>
+      <a href="gallery.html">Gallery</a>
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#about">About</a>
@@ -387,10 +92,12 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
   </figure>
   <div class="scrim"></div>
   <div class="hero-inner wrap">
-    <p class="caps kicker">Serving Barrie, Innisfil, Orillia &amp; Springwater</p>
-    <h1>One house at a time.</h1>
-    <p class="lede">The same person quotes the job, preps it and paints it. No subcontractors, no crew you've never met.</p>
-    <a class="btn" href="#quote">Request a quote</a>
+    <div class="hero-panel">
+      <p class="caps kicker">Serving Barrie, Innisfil, Orillia &amp; Springwater</p>
+      <h1>One house at a time.</h1>
+      <p class="lede">The same person quotes the job, preps it and paints it. No subcontractors, no crew you've never met.</p>
+      <a class="btn" href="#quote">Request a quote</a>
+    </div>
   </div>
 </section>
 
@@ -493,6 +200,7 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
     </div>
 
     <!-- To add more jobs, copy a pair above and change the images and captions. -->
+    <p class="cta-row"><a class="btn" href="gallery.html">See every project</a></p>
   </div>
 </section>
 
@@ -539,7 +247,7 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
     <div class="narrow">
       <p class="caps">Services</p>
       <h2>What gets done.</h2>
-      <p>One job at a time, inside or out. Patching, sanding and caulking are in the price. No change orders halfway through.</p>
+      <p>One job at a time, inside or out. Paint, stain and the prep that goes under them; no tiling. Patching, sanding and caulking are in the price. No change orders halfway through.</p>
     </div>
 
     <!-- FILL: this list matches the business card. If you drop or add a service, change
@@ -572,10 +280,6 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
       <article class="item">
         <h3>Drywall &amp; mudding</h3>
         <p>Nail pops, cracks, water stains and patchwork mudded, sanded and blended before paint goes on.</p>
-      </article>
-      <article class="item">
-        <h3>Backsplash installation</h3>
-        <p>Kitchen backsplashes set and grouted, usually as the last step of a cabinet job.</p>
       </article>
     </div>
   </div>
@@ -678,7 +382,6 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
           <label><input type="checkbox" name="work[]" value="Deck staining"> Deck staining</label>
           <label><input type="checkbox" name="work[]" value="Closets"> Closets</label>
           <label><input type="checkbox" name="work[]" value="Furniture"> Furniture</label>
-          <label><input type="checkbox" name="work[]" value="Backsplash"> Backsplash</label>
           <label><input type="checkbox" name="work[]" value="Repairs"> Repairs</label>
         </div>
       </fieldset>
@@ -740,6 +443,7 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
       <span>&copy; <span id="yr">2026</span> On The Roll Painters</span>
       <!-- FILL: add "Fully insured ·" in front once you have a policy. Not before. -->
       <span>Free estimates</span>
+      <span><a href="https://indinuity.com" target="_blank" rel="noopener">Built by Indinuity</a></span>
     </div>
   </div>
 </footer>
@@ -749,101 +453,6 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
   <button class="close" type="button" autofocus>Close</button>
 </dialog>
 
-<script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-/* ---------- mobile menu ---------- */
-const menuBtn = document.querySelector('.menu-btn');
-const nav = document.getElementById('nav');
-const setMenu = open => {
-  nav.classList.toggle('open', open);
-  menuBtn.setAttribute('aria-expanded', String(open));
-};
-menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
-nav.addEventListener('click', e => { if (e.target.tagName === 'A') setMenu(false); });
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); }
-});
-document.addEventListener('click', e => {
-  if (nav.classList.contains('open') && !e.target.closest('.bar')) setMenu(false);
-});
-
-/* ---------- lightbox: only wired up once a real image has loaded ---------- */
-const lb = document.getElementById('lb');
-const lbImg = document.createElement('img');
-lbImg.alt = '';
-lb.append(lbImg);
-document.querySelectorAll('#work .shot:not(.compare), #beforeafter .shot:not(.compare)').forEach(fig => {
-  const img = fig.querySelector('img');
-  const open = () => {
-    lbImg.src = img.currentSrc || img.src;
-    lbImg.alt = img.alt;
-    lb.showModal();
-  };
-  const enable = () => {
-    if (img.naturalWidth === 0) return;
-    fig.classList.add('zoomable');
-    fig.tabIndex = 0;
-    fig.setAttribute('role', 'button');
-    fig.setAttribute('aria-label', 'Enlarge: ' + img.alt);
-    fig.addEventListener('click', open);
-    fig.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
-    });
-  };
-  if (img.complete) enable(); else img.addEventListener('load', enable, { once: true });
-});
-lb.querySelector('.close').addEventListener('click', () => lb.close());
-lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
-lb.addEventListener('close', () => { lbImg.removeAttribute('src'); });
-
-/* ---------- before/after sliders ---------- */
-const hoverFollows = matchMedia('(hover:hover) and (pointer:fine)').matches;
-document.querySelectorAll('.compare').forEach(fig => {
-  const range = fig.querySelector('input[type=range]');
-  const set = v => {
-    v = Math.round(Math.max(0, Math.min(100, v)));
-    range.value = v;
-    fig.style.setProperty('--pos', v + '%');
-    range.setAttribute('aria-valuetext', v + '% before, ' + (100 - v) + '% after');
-  };
-  range.addEventListener('input', () => set(+range.value));
-  if (hoverFollows) fig.addEventListener('pointermove', e => {
-    if (e.pointerType !== 'mouse') return;
-    const r = fig.getBoundingClientRect();
-    set((e.clientX - r.left) / r.width * 100);
-  });
-  set(+range.value);
-});
-
-/* ---------- quote form ---------- */
-const form = document.getElementById('quoteForm');
-const note = document.getElementById('formnote');
-const emailText = document.querySelector('footer a[href^="mailto:"]').textContent.trim();
-const say = msg => { note.textContent = msg; note.classList.add('show'); };
-
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  if (form.getAttribute('action').includes('YOUR_FORM_ID')) {
-    say('The form isn’t connected yet. Add your Formspree ID to the form action.');
-    return;
-  }
-  const btn = form.querySelector('button[type=submit]');
-  btn.disabled = true; btn.textContent = 'Sending';
-  try {
-    const res = await fetch(form.getAttribute('action'), {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' }
-    });
-    if (!res.ok) throw new Error('Form service returned ' + res.status);
-    form.classList.add('sent');
-    say('Got it. Expect a reply within a day.');
-  } catch (err) {
-    btn.disabled = false; btn.textContent = 'Send request';
-    say('That didn’t send. Email ' + emailText + ' instead.');
-  }
-});
-</script>
+<script src="site.js" defer></script>
 </body>
 </html>

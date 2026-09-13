@@ -29,6 +29,10 @@ images/*
 !images/work-*.jpg
 !images/before.jpg
 !images/after.jpg
+# gallery photos, also made with tools/prep-photo.py (slot gallery/<name>)
+!images/gallery/
+images/gallery/IMG_*
+images/gallery/* *
 
 # Design originals
 *.psd
