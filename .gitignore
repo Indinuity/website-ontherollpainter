@@ -23,6 +23,7 @@ images/*
 !images/apple-touch-icon.png
 !images/icon-192.png
 !images/og-image.png
+!images/indinuity-shield.svg
 # photos, always made with tools/prep-photo.py
 !images/hero.jpg
 !images/about.jpg

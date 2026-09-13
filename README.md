@@ -77,6 +77,7 @@ only uses the copies in `images/`:
 | `favicon.svg`, `favicon.png` | the olive badge — navy swipe, sage-lime roller | browser tab |
 | `apple-touch-icon.png`, `icon-192.png` | the same badge | phone home screens |
 | `og-image.png` | the link-preview card | when the link is shared or texted |
+| `indinuity-shield.svg` | Indinuity's mark | the "Built by Indinuity" credit in the footer |
 
 If the designer supplies these two marks as finished files, copy them over the `-DERIVED`
 files and over `images/logo.svg` / `images/logo-stacked.svg`.
