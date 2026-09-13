@@ -55,22 +55,22 @@ phone are the header, the quote section lead, the footer contact list, and the
 ## 2. Logo and photos
 
 **Brand files in place.** The logo is the paint-swipe script mark from the business card,
-coloured for the site's olive backgrounds: **cream paint strip, gold lettering, navy
-roller**, sitting directly on the olive with no card behind it. (The business card is the
-inverse — navy strip on white — because the card is white.) `brand/brand-sheet.png` shows
+coloured for the site's olive backgrounds: **navy paint strip, gold lettering, cream
+roller**, sitting directly on the olive with no card behind it. (The business card has an
+olive roller instead, which works on white but vanishes on the site's olive.) `brand/brand-sheet.png` shows
 the system; `brand/brand-sheet.html` is its source. `brand/` also keeps the whole package
 from the designer — `brand/logo-card/`, `brand/logo-script/`, `brand/logo/` — of which
-the files actually in use are the two marked `-DERIVED`: the designer's reversed files
-with the lettering changed from olive to gold (and, for the single-line mark, the roller
-from lime to navy). Everything else in those folders is an earlier exploration. The page
+the files actually in use are the two marked `-site-DERIVED`: the designer's reversed
+files with the strip recoloured navy, the roller cream and the lettering gold. Everything
+else in those folders is an earlier exploration. The page
 only uses the copies in `images/`:
 
 | File | What it is | Where it shows |
 |---|---|---|
-| `logo.svg` | single-line mark (`logo-script-compact-cream-gold-DERIVED.svg`) | header, on the olive bar |
-| `logo-stacked.svg` | two-line mark (`logo-card-cream-gold-DERIVED.svg`) | footer |
+| `logo.svg` | single-line mark (`logo-script-compact-site-DERIVED.svg`) | header, on the olive bar |
+| `logo-stacked.svg` | two-line mark (`logo-card-site-DERIVED.svg`) | footer |
 | `logo-full.png` | the two-line mark on olive | structured data (what Google shows as the logo) |
-| `favicon.svg`, `favicon.png` | the olive badge with the roller | browser tab |
+| `favicon.svg`, `favicon.png` | the olive badge — navy swipe, cream roller | browser tab |
 | `apple-touch-icon.png`, `icon-192.png` | the same badge | phone home screens |
 | `og-image.png` | the link-preview card | when the link is shared or texted |
 
@@ -140,7 +140,7 @@ Also look at what's *in* the frame before publishing: house numbers, name plaque
 family photos on the fridge, and anything with a licence plate. Crop or skip those.
 
 The site's colours are earth tones: olive `#4C5847` for the header and deep olive
-`#2F3730` for the footer, gold `#D9A73A` for the quote buttons, the roller's navy
+`#2F3730` for the footer, gold `#D9A73A` for the quote buttons, the strip's navy
 `#143C78` for the before/after slider handles, and warm neutrals everywhere else so the
 photos carry the colour. They live in one `:root` block at the top of `index.html` and on
 `brand/brand-sheet.png` (`brand/brand-sheet.html` is its source; re-render it if the marks
