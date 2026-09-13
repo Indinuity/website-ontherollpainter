@@ -92,18 +92,21 @@ which doesn't match the services any more. The supplied version is kept at
 | `hero.jpg` | IMG_6147 (white kitchen, dark counters) | top of the page, under the headline |
 | `og-image.jpg` | the same photo, cropped 1200×630 | link previews on social and in messages |
 | `work-01.jpg` | IMG_6948 (log-home staircase) | Previous work, first pair |
-| `work-02.jpg` | IMG_6139 (tall stairwell) | Previous work, first pair |
-| `work-03-before.jpg` / `-after.jpg` | Deck Stain B4 / Deck Stain After | Previous work, deck slider |
+| `work-02.jpg` | IMG_6139 (tall stairwell) | gallery only — the bare stairs made it read as a "before" on the home page |
+| `gallery/front-door-before-1.jpg` / `-after-1.jpg` | Swan door b4 (cropped) / Swan door after | Previous work, side by side; also on the gallery |
+| `work-03-before.jpg` / `-after.jpg` | IMG_6811 / IMG_6825 (covered porch and deck, same spot) | Previous work, deck slider — also on the gallery |
 | `work-04-before.jpg` / `-after.jpg` | Swan house b4 / Swan house after (2) | Previous work, cabinets slider |
 | `before.jpg` | Barbs kitchen (2) | Before & after |
 | `after.jpg` | Barbs kitchen after (5) | Before & after |
 | `about.jpg` | IMG_6826 (two-tone deck) | About section |
-| `gallery/*.jpg` (21 files) | the rest of the usable photos, at 1200px | the gallery page, by project |
+| `gallery/*.jpg` (21 files) | the rest of the usable photos, at 1200px, incl. the front steps before/after | the gallery page, by project |
 
 **The gallery page** (`gallery.html`) shows nine projects, each with a title, one line of
-what's visible, and its photos: two before/after sliders (Swan kitchen, deck steps), two
-side-by-side pairs (Barbs kitchen, and the front door with the house number cropped out),
-and grids of finished work for the rest. To add a project, copy a `<section class="project">`
+what's visible, and its photos: three before/after sliders (Swan kitchen, the covered
+porch deck, the front steps), two side-by-side pairs (Barbs kitchen, and the front door
+with the house number cropped out), and grids of finished work for the rest. A slider
+needs both photos from the same spot; a pair shot from different angles goes side by side
+(the home page's front door uses a "twin" plate — two half-width crops in one slot). To add a project, copy a `<section class="project">`
 block; to add a photo, make it with the prep script using a `gallery/<project>-<n>` slot.
 
 The two sliders reveal the "after" as you drag, hover, or press the arrow keys. A slider

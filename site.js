@@ -23,7 +23,7 @@ const lbImg = document.createElement('img');
 lbImg.alt = '';
 lb.append(lbImg);
 document.querySelectorAll('#work .shot:not(.compare), #beforeafter .shot:not(.compare), .project .shot:not(.compare)').forEach(fig => {
-  const img = fig.querySelector('img');
+  const img = fig.querySelector('img.after') || fig.querySelector('img');  // a twin opens its after
   const open = () => {
     lbImg.src = img.currentSrc || img.src;
     lbImg.alt = img.alt;

@@ -169,6 +169,17 @@ nav a:hover{color:#fff}
 }
 .compare input{position:absolute;inset:0;z-index:4;width:100%;height:100%;margin:0;padding:0;opacity:0;cursor:ew-resize;touch-action:pan-y;-webkit-appearance:none;appearance:none}
 .compare:has(input:focus-visible){outline:2px solid var(--ink);outline-offset:4px}
+
+/* ---------- before/after twin ----------
+   Two photos side by side inside one plate, for a pair shot from
+   different angles (a slider needs the same angle). Suits tall
+   subjects like a door. */
+.twin{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--paper)}
+.twin img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+.twin .tag{position:absolute;top:.75rem;z-index:3;pointer-events:none;font-family:var(--ui);font-weight:400;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(36,31,26,.65);padding:.35rem .6rem}
+.twin .tag-b{left:.75rem}
+.twin .tag-a{right:.75rem}
+.twin-door .after{object-position:62% 50%}  /* the after is shot at an angle; keep the knobs in */
 .ba-pair{margin-top:clamp(2.5rem,6vw,4rem)}
 .ba-cap{margin-top:1.5rem}
 
