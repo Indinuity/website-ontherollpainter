@@ -35,6 +35,7 @@ marked. The short list:
 | Services | the seven items in "What gets done" | paint and stain only — no tiling, by request |
 | Stats bar | three panels under the hero | add insurance once you have it |
 | About | four paragraphs | names Lexis Carter; read them and make sure they're true |
+| Trade rate | "For painting companies" section | $250 a day plus travel; define the hours and what's included |
 | Reviews | commented out until you have real ones | see the block above the quote section |
 | Formspree ID | the `<form action="...">` | YOUR_FORM_ID |
 | Structured data | the `application/ld+json` block in the `<head>` | add logo and image URLs once the files exist |
@@ -270,6 +271,13 @@ Things to verify before this goes live:
   panel ready, and the footer line has a note showing where "Fully insured" goes.
 - **The warranty line in the About section.** It's a promise to come back and fix your
   own failures. Only leave it in if you mean it.
+- **WSIB, before taking contract work.** Painting your own customers' homes is exempt from
+  WSIB (the "home renovation" exemption: work done directly for the person who lives
+  there). Working *for another painting company* is not exempt — an independent operator
+  in construction needs WSIB coverage, and the company hiring you will ask for a WSIB
+  clearance certificate before you start. Register at wsib.ca before the first contract
+  day; premiums are a percentage of what you bill. Liability insurance will be asked for
+  too.
 - **The project captions.** They describe only what's visible in each photo. Read them
   against your memory of the job and correct anything that's off. Wallpaper removal was
   dropped from the services list because it isn't on your card — say so if you do it.
