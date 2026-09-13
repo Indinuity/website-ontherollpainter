@@ -54,30 +54,28 @@ phone are the header, the quote section lead, the footer contact list, and the
 
 ## 2. Logo and photos
 
-**Brand files in place.** The logo is the paint-swipe script mark from the business card:
-**navy paint strip, gold lettering, olive roller**, sitting directly on whatever is behind
-it — no white or cream card. `brand/brand-sheet.png` shows the system; `brand/` also
-keeps the whole package: `brand/logo-card/` (the two-line mark — `alt-navy-sweep.svg` is
-the one in use; the others are earlier explorations), `brand/logo-script/` (single-line)
-and `brand/logo/` (an earlier block-capitals set). The page only uses the copies in
-`images/`:
+**Brand files in place.** The logo is the paint-swipe script mark from the business card,
+coloured for the site's olive backgrounds: **cream paint strip, gold lettering, navy
+roller**, sitting directly on the olive with no card behind it. (The business card is the
+inverse — navy strip on white — because the card is white.) `brand/brand-sheet.png` shows
+the system; `brand/brand-sheet.html` is its source. `brand/` also keeps the whole package
+from the designer — `brand/logo-card/`, `brand/logo-script/`, `brand/logo/` — of which
+the files actually in use are the two marked `-DERIVED`: the designer's reversed files
+with the lettering changed from olive to gold (and, for the single-line mark, the roller
+from lime to navy). Everything else in those folders is an earlier exploration. The page
+only uses the copies in `images/`:
 
 | File | What it is | Where it shows |
 |---|---|---|
-| `logo.svg` | single-line mark — see note | header, on the olive bar |
-| `logo-stacked.svg` | two-line mark (`alt-navy-sweep.svg`) | footer |
-| `logo-full.png` | two-line mark on a cream background | structured data (what Google shows as the logo) |
+| `logo.svg` | single-line mark (`logo-script-compact-cream-gold-DERIVED.svg`) | header, on the olive bar |
+| `logo-stacked.svg` | two-line mark (`logo-card-cream-gold-DERIVED.svg`) | footer |
+| `logo-full.png` | the two-line mark on olive | structured data (what Google shows as the logo) |
 | `favicon.svg`, `favicon.png` | the olive badge with the roller | browser tab |
 | `apple-touch-icon.png`, `icon-192.png` | the same badge | phone home screens |
 | `og-image.png` | the link-preview card | when the link is shared or texted |
 
-**Note on the header mark.** The two-line mark is too small to read at header height, and
-the single-line file in the package still has a lime roller. So the header uses
-`logo-script-compact.svg` with one change: the roller is the light olive `#75866A` from
-the designer's own `alt-navy-sweep.svg`, because an olive roller vanishes on the olive
-bar. That file is saved as `brand/logo-script/logo-script-compact-navy-DERIVED.svg`. When
-the designer delivers a single-line mark in the final colours, copy it over
-`images/logo.svg`.
+If the designer supplies these two marks as finished files, copy them over the `-DERIVED`
+files and over `images/logo.svg` / `images/logo-stacked.svg`.
 
 The link-preview card was rebuilt from the supplied one's layout with the tagline
 corrected: the supplied card reads "Interior house painting · Barrie & Simcoe County",
@@ -141,12 +139,12 @@ file yourself.)
 Also look at what's *in* the frame before publishing: house numbers, name plaques, mail,
 family photos on the fridge, and anything with a licence plate. Crop or skip those.
 
-The site's colours come from the logo: olive `#4C5847` for the header and deep olive
-`#2F3730` for the footer, gold `#D9A73A` for the quote buttons, the strip's navy
+The site's colours are earth tones: olive `#4C5847` for the header and deep olive
+`#2F3730` for the footer, gold `#D9A73A` for the quote buttons, the roller's navy
 `#143C78` for the before/after slider handles, and warm neutrals everywhere else so the
-photos carry the colour. They live in one `:root` block at the top of `index.html` and
-on `brand/brand-sheet.png` (regenerated 2026-09-12; `brand/brand-sheet.html` is its
-source, so it can be re-rendered if the marks change again).
+photos carry the colour. They live in one `:root` block at the top of `index.html` and on
+`brand/brand-sheet.png` (`brand/brand-sheet.html` is its source; re-render it if the marks
+change again).
 
 ## 3. Making the form work
 
