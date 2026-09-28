@@ -37,7 +37,6 @@ marked. The short list:
 | About | five paragraphs | in Lexis's own words (September 2026); keep them true |
 | Trade rate | "For painting companies" section | from $350 a day, plus travel and materials; the detail goes in each job's written terms |
 | Reviews | commented out until you have real ones | see the block above the quote section |
-| Formspree ID | the `<form action="...">` | YOUR_FORM_ID |
 | Structured data | the `application/ld+json` block in the `<head>` | add logo and image URLs once the files exist |
 
 Already filled in, as requested:
@@ -178,13 +177,16 @@ GitHub Pages only serves files, so the form needs an outside service to deliver 
 1. Sign up at formspree.io with **ontherollpainter@gmail.com** (free tier: 50 submissions
    a month).
 2. Create a form, copy the endpoint — it looks like `https://formspree.io/f/xzyabcde`.
-3. Paste it over `https://formspree.io/f/YOUR_FORM_ID` in `index.html`.
-4. Submit the form once yourself and confirm the verification email.
+3. Paste it into the `<form action="...">` in `index.html`. (Done: the form posts to
+   `https://formspree.io/f/mjykwvqj`.)
+4. Submit the form once yourself from the live site. Formspree emails a verification
+   link on the first submission; click it, or nothing else gets delivered. Then check
+   Gmail's spam folder for that first message and mark it "Not spam".
 
 Submissions land in your Gmail with the subject "Quote request from ontherollpainter.ca",
-and the sender's email is set as reply-to so you can answer directly. The page shows a
-confirmation without navigating away. Until the ID is in, the form politely says it isn't
-connected yet rather than sending anywhere.
+and the sender's email is set as reply-to so you can answer directly. Every submission is
+also kept in the Formspree dashboard, so a lead deleted by mistake isn't lost. The page
+shows a confirmation without navigating away.
 
 The form asks the customer for their phone number so you can call them back. That's
 theirs, not yours — it never appears on the site.
