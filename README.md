@@ -34,7 +34,7 @@ marked. The short list:
 | Before & after | the paragraph and caption under the Swan kitchen photos | same — confirm it matches how the job went |
 | Services | the seven items in "What gets done" | paint and stain only — no tiling, by request |
 | Stats bar | three panels under the hero | add insurance once you have it |
-| About | four paragraphs | names Lexis Carter; read them and make sure they're true |
+| About | five paragraphs | in Lexis's own words (September 2026); keep them true |
 | Trade rate | "For painting companies" section | from $350 a day, plus travel and materials; the detail goes in each job's written terms |
 | Reviews | commented out until you have real ones | see the block above the quote section |
 | Formspree ID | the `<form action="...">` | YOUR_FORM_ID |
@@ -270,8 +270,6 @@ Things to verify before this goes live:
   year, and "are you insured?" is one of the first questions a careful homeowner asks —
   some won't hire without it. When you have a policy: the stats bar has a commented-in
   panel ready, and the footer line has a note showing where "Fully insured" goes.
-- **The warranty line in the About section.** It's a promise to come back and fix your
-  own failures. Only leave it in if you mean it.
 - **Before the first day of contract work for another company.** Five things, none of
   them big, that keep a one-person painter from being the one left holding the bill:
   1. **WSIB.** Painting your own customers' homes is exempt (work done directly for the
