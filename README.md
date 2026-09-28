@@ -31,7 +31,7 @@ marked. The short list:
 | What | Where it appears | Currently says |
 |---|---|---|
 | Project captions | four items in "Previous work" (two are before/after sliders) | describe what's visible in each photo; add what only you know |
-| Before & after | the paragraph and caption under the Swan kitchen photos | same — confirm it matches how the job went |
+| Before & after | the paragraph and caption in the Before & after section | same — confirm it matches how the job went |
 | Services | the seven items in "What gets done" | paint and stain only — no tiling, by request |
 | Stats bar | three panels under the hero | add insurance once you have it |
 | About | five paragraphs | in Lexis's own words (September 2026); keep them true |
@@ -92,40 +92,47 @@ which doesn't match the services any more. The supplied version is kept at
 | File | Made from | Where it shows |
 |---|---|---|
 | `hero.jpg` | IMG_6147 (white kitchen, dark counters) | top of the page, under the headline |
-| `og-image.jpg` | the same photo, cropped 1200×630 | link previews on social and in messages |
 | `work-01.jpg` | IMG_6948 (log-home staircase) | Previous work, first pair |
 | `work-02.jpg` | IMG_6139 (tall stairwell) | gallery only — the bare stairs made it read as a "before" on the home page |
-| `gallery/front-door-before-1.jpg` / `-after-1.jpg` | Swan door b4 (cropped) / Swan door after | Previous work, side by side; also on the gallery |
+| `gallery/front-door-before-1.jpg` / `-after-1.jpg` | the front door, before (cropped) and after | Previous work, side by side; also on the gallery |
 | `work-03-before.jpg` / `-after.jpg` | IMG_6811 / IMG_6825 (covered porch and deck, same spot) | Previous work, deck slider — also on the gallery |
-| `work-04-before.jpg` / `-after.jpg` | Swan house b4 / Swan house after (2) | Previous work, cabinets slider |
-| `before.jpg` | Barbs kitchen (2) | Before & after |
-| `after.jpg` | Barbs kitchen after (5) | Before & after |
+| `work-04-before.jpg` / `-after.jpg` | the first oak kitchen, before and after from the same spot | Previous work, cabinets slider |
+| `before.jpg` | the second oak kitchen, before | Before & after |
+| `after.jpg` | the second oak kitchen, after | Before & after |
 | `about.jpg` | IMG_6826 (two-tone deck) | About section |
-| `gallery/*.jpg` (21 files) | the rest of the usable photos, at 1200px, incl. the front steps before/after | the gallery page, by project |
+| `gallery/*.jpg` | the rest of the usable photos, at 1200px, incl. the front steps before/after | the gallery page, by project |
+| `gallery/apartment-1` … `8.jpg` | the apartment job — 240×320 thumbnails, all that was supplied | the gallery page; swap in full-size originals when you have them |
 
-**The gallery page** (`gallery.html`) shows nine projects, each with a title, one line of
-what's visible, and its photos: three before/after sliders (Swan kitchen, the covered
-porch deck, the front steps), two side-by-side pairs (Barbs kitchen, and the front door
-with the house number cropped out), and grids of finished work for the rest. A slider
+**The gallery page** (`gallery.html`) shows ten projects, each with a title, one line of
+what's visible, and its photos: three before/after sliders (the first oak kitchen, the
+covered porch deck, the front steps), two side-by-side pairs (the second oak kitchen, and
+the front door with the house number cropped out), and grids of finished work for the
+rest, including a whole apartment. A slider
 needs both photos from the same spot; a pair shot from different angles goes side by side
 (the home page's front door uses a "twin" plate — two half-width crops in one slot). To add a project, copy a `<section class="project">`
 block; to add a photo, make it with the prep script using a `gallery/<project>-<n>` slot.
 
-The two sliders reveal the "after" as you drag, hover, or press the arrow keys. A slider
-only works when both photos are of the same thing from roughly the same spot — the deck
-steps and the Swan kitchen (same microwave in both) qualify; the Barbs kitchen photos are
-from different angles, so they sit side by side instead.
+The sliders reveal the "after" as you drag, hover, or press the arrow keys. A slider
+only works when both photos are of the same thing from roughly the same spot — the porch
+deck and the first oak kitchen (same microwave in both) qualify; the second kitchen's
+photos are from different angles, so they sit side by side instead.
 
-Visitors can click or tap the single photos to see them full-size. To swap one, run the
+Visitors can click or tap the single photos to see them full-size (photos under 600px
+wide, like the apartment thumbnails, skip this — there's nothing more to see). To swap one, run the
 prep script (below) on a different original with the same slot name.
 
 The About section deliberately shows a finished job rather than a photo of you — no
 photo of the painter goes on the site, by request. Nothing else is outstanding on the
 image side.
 
-Photos not used: the business-card shots (they show the phone number), "Swan door b4"
-(the house number and name plaque are in frame), and "Barbs kitchen" #8 (family photos on
-the fridge). Everything else is still on your machine in `images/`, ignored by git.
+Photos not used: the business-card shots (they show the phone number), the uncropped
+front-door before (the house number and name plaque are in frame), one kitchen before with
+family photos on the fridge, and the apartment's two window shots (the view across the
+street would place the building). Everything else is still on your machine, ignored by git.
+
+**Keep customers out of file names.** Name files and page anchors by the work (`oak-kitchen`,
+`front-door`), never by the customer's name or street — both are visible to anyone who
+looks at the page source or the public repo.
 
 **Never upload a photo straight from a phone.** Two reasons:
 

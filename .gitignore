@@ -8,7 +8,7 @@ desktop.ini
 .vscode/
 
 # images/ is a whitelist. Only the web-ready files index.html actually references
-# can be committed. Raw camera exports (IMG_1234.jpg, "Barbs kitchen.jpg") are
+# can be committed. Raw camera exports (IMG_1234.jpg, "Kitchen after.jpg") are
 # several MB each and carry GPS coordinates of the customer's house in their
 # metadata, so they must never be pushed. Run tools/prep-photo.py to make a
 # web-ready copy under one of the allowed names — see README section 2.

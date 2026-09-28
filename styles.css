@@ -338,3 +338,7 @@ dialog .close{position:fixed;top:1.5rem;right:1.5rem;background:transparent;bord
 .gallery-grid figcaption b{font-weight:500;color:var(--ink)}
 @media(max-width:900px){.gallery-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.gallery-grid{grid-template-columns:1fr}}
+/* for low-resolution photos: more, smaller columns so they display near their real size */
+.gallery-grid.small{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.gallery-grid.small{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.gallery-grid.small{grid-template-columns:1fr 1fr}}

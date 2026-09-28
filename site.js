@@ -30,7 +30,7 @@ document.querySelectorAll('#work .shot:not(.compare), #beforeafter .shot:not(.co
     lb.showModal();
   };
   const enable = () => {
-    if (img.naturalWidth === 0) return;
+    if (img.naturalWidth < 600) return;  // missing, or too small to be worth enlarging
     fig.classList.add('zoomable');
     fig.tabIndex = 0;
     fig.setAttribute('role', 'button');

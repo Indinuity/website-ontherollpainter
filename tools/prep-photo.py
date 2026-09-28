@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Make a web-ready copy of a photo for the site.
 
-    python3 tools/prep-photo.py "images/Barbs kitchen after.jpg" work-01
+    python3 tools/prep-photo.py "images/Kitchen after.jpg" work-01
 
 Writes images/work-01.jpg: resized to 1600px on the long edge, rotated the way the
 camera intended, re-encoded as a progressive JPEG, and with ALL metadata dropped —
